@@ -6,7 +6,7 @@
 <div class="container">
 
 	<h1><small>Sign In</small></h1>
-	<form role="form" action="accounts/login.php" method="post" >
+	<form role="form" action="<?php echo $rootDir ?>/controllers/formcontrol.php" method="post" >
 		<div class="form-group">
 		    <label for="username">Username:</label>
 		    <input type="text" class="form-control" id="username">
@@ -20,5 +20,12 @@
 	  	</div>
 	 	<button type="submit" class="btn btn-default">Submit</button>
 	</form>
-  
+	
+	<div class="well">
+		<a href="<?php echo $rootDir ?>/controllers/formcontrol.php" class="button">CLICK ME</a><br>
+		<?php 
+
+		
+		?>
+  	</div>
 </div>

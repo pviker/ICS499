@@ -11,9 +11,13 @@
 	if (!isset($_SESSION)) session_start();
 	
 	// checks if file system is on server and corrects root directory for absolute URL paths
-	$server = $_SERVER['SERVER_NAME'];
-	if (strpos($server,'metrostate.edu') == true) {
-		$server = "/~ics499sp160202";
-	} else $server = "";
+ 	$server = $_SERVER['SERVER_NAME'];
+ 	$pos = strpos($server, "localhost");
+
+ 	if ($pos !== false) {
+ 		$rootDir = "/thelearninghub";
+ 	} else {
+ 		$rootDir = "";
+ 	}
 	
 ?>
