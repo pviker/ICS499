@@ -1,2 +1,2 @@
-# ICS499
+# thelearninghub
 Readme file

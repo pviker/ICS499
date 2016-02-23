@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #C8B197;
+}
+.mainheader {
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 0px;
+	background-color: #696053;
+	color: #C8B197;
+}
