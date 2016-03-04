@@ -10,7 +10,8 @@
 		$rootDir = "/thelearninghub";
 	} else {
 		$rootDir = "";
-	}	
+	}
+	
 ?>
 	
 <!DOCTYPE html>	
@@ -35,6 +36,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		
 		<link href='<?php echo $rootDir ?>/styles/main.css' rel='stylesheet' type='text/css'>
+		<link href='<?php echo $rootDir ?>/styles/colorscheme.css' rel='stylesheet' type='text/css'>
 		
 	</head>
 

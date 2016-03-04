@@ -1,11 +1,15 @@
 @CHARSET "UTF-8";
 
-body {
+/*body {
 	background-color: #C8B197;
+}*/
+
+.head-logo {
+    /*-ms-transform: rotate(-7deg); /* IE 9 */
+    /*-webkit-transform: rotate(-7deg); *//* Chrome, Safari, Opera */
+    /*transform: rotate(-5deg);*/
 }
-.mainheader {
-	font-family: 'Ubuntu', sans-serif;
-	margin-bottom: 0px;
-	background-color: #696053;
-	color: #C8B197;
+
+.forum {
+	cursor: pointer;
 }
