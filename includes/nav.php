@@ -77,6 +77,8 @@
 	        			$active = "";
 	        		}
 		        ?>
+		        
+		        <?php if(isset($_SESSION['selectedCourse'])){?>
 	        	<li class="dropdown <?php echo $active; ?>">
 	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Content<span class="caret"> </span></a>
 	          		<ul class="dropdown-menu">
@@ -89,6 +91,7 @@
 			            <li><a href="<?php echo $rootDir ?>/view/content/grades.php">Grades</a></li>
 	          		</ul>
 	        	</li>
+	        	<?php }?>
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
 	        		$pos = strpos($server, "contact");

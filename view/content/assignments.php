@@ -15,7 +15,7 @@
 			    		
 			  		</div>
 				  	<div class="panel-body">
-				    	<p>*DB query for all assignements...Styled with a table?</p>
+				    	<p>*DB query for all assignments...Styled with a table?</p>
 				  	</div>
 				</div>
 			</div>
