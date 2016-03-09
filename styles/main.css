@@ -13,3 +13,9 @@
 .forum {
 	cursor: pointer;
 }
+
+.div-align-right {
+    float: right;
+    width: 50%;
+    padding: 1em;
+}

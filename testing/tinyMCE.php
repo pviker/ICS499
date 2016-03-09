@@ -1,5 +1,3 @@
-<?php
-?>
 
 <!DOCTYPE html>
 <html>
@@ -9,5 +7,16 @@
 </head>
 <body>
   <textarea>Easy! You should check out MoxieManager!</textarea>
+  
+  <?php
+	$to = "pviker@me.com";
+	$subject = "My subject";
+	$txt = "Hello world!";
+	$headers = "From: pviker@me.com" . "\r\n" . "CC: patviker@gmx.com";
+	
+	if(mail($to,$subject,$txt,$headers)){
+		echo "TRUE";
+	} else echo "FALSE";
+?>
 </body>
 </html>

@@ -38,6 +38,9 @@
 		<link href='<?php echo $rootDir ?>/styles/main.css' rel='stylesheet' type='text/css'>
 		<link href='<?php echo $rootDir ?>/styles/colorscheme.css' rel='stylesheet' type='text/css'>
 		
+		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  		<script>tinymce.init({ selector:'textarea' });</script>
+		
 	</head>
 
 <body>
