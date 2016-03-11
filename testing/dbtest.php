@@ -5,15 +5,15 @@
 	
 	
 	
-	//Query for user info
-	$query = "select * from test";
+// 	//Query for user info
+// 	$query = "select * from test";
 	 
-	$results = mysqli_query($dbc, $query);
+// 	$results = mysqli_query($dbc, $query);
 	
-	while($row = mysqli_fetch_assoc($results)) {
+// 	while($row = mysqli_fetch_assoc($results)) {
 	
-			echo "id: " . $row["idtest"] . "<br>
-				  name: " . $row["name"] . "<br>";
+// 			echo "id: " . $row["idtest"] . "<br>
+// 				  name: " . $row["name"] . "<br>";
 			
-		}
+// 		}
 ?>

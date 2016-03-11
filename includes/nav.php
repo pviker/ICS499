@@ -37,7 +37,8 @@
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 	        	<span class="icon-bar"> </span>
 	        	<span class="icon-bar"> </span>
-	        	<span class="icon-bar"> </span>                        
+	        	<span class="icon-bar"> </span>     
+	        	<span class="icon-bar"> </span>                     
 	      	</button>
 	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/view/course.php?courseID=<?php echo $selectedCourse; ?>">Course: <?php echo $selectedCourse; ?></a>
 	    </div>
@@ -70,6 +71,8 @@
 	        	<li class="dropdown <?php echo $active; ?>">
 	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses<span class="caret"> </span></a>
 	        		<ul class="dropdown-menu">
+	        			<li><a href="#">All Courses</a></li>
+				        <li role="separator" class="divider"></li>
 	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=1">Course 1</a></li>
 	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=2">Course 2</a></li>
 	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=3">Course 3</a></li>
