@@ -9,6 +9,5 @@ Students:
 	Jordan Grenier
 	Patrick Viker
 	
-# The Learning Hub is a digital classroom that students and instructors can use to view courses, submit course work,
-# view grades, and communicate with fellow classmates.
+#### The Learning Hub is a digital classroom that students and instructors can use to view courses, submit course work, view grades, and communicate with fellow classmates.
 
