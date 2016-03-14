@@ -1,0 +1,4 @@
+MySQL PHP BLOB tutorial
+
+http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
+

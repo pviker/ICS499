@@ -6,7 +6,7 @@
 ?>
 
 	<div class="container-fluid">
-		<textarea>Reply to posts here!</textarea><br>
+		
 		<div class="row">
 	    	<div class="col-sm-12">
     			<div class="panel panel-primary" style="border-color: #696053;">
@@ -17,7 +17,7 @@
 				    	<div class="list-group">
 							<div class="panel-group" id="accordion">
 						    	<div class="panel panel-default">
-						      		<div class="panel-heading forum" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+						      		<div class="panel-heading forum" data-toggle="collapse" data-parent="" href="">
 						        		<h4 class="panel-title">
 						          			1 - Post Title
 						        		</h4>
@@ -37,6 +37,9 @@
 				</div>
     		</div>
 		</div>
+		
+		<textarea>Reply to posts here!</textarea><br>
+		
 	</div>
 
 </body>

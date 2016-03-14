@@ -40,7 +40,9 @@
 	        	<span class="icon-bar"> </span>     
 	        	<span class="icon-bar"> </span>                     
 	      	</button>
-	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/view/course.php?courseID=<?php echo $selectedCourse; ?>">Course: <?php echo $selectedCourse; ?></a>
+	    <!-- 	<a class="navbar-brand" href="<?php //echo $rootDir ?>/view/course.php?courseID=<?php //echo $selectedCourse; ?>">
+	    		Course: <?php //echo $selectedCourse; ?></a> -->
+	    	<a class="navbar-brand" href="#">TLH</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	    	<ul class="nav navbar-nav">
@@ -126,10 +128,10 @@
 <!-- 	     		<li><a href="#">My Profile</a></li> -->
 	      	</ul>
 	      	<ul class="nav navbar-nav navbar-right">
-	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $username; ?></a></li>
+	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> First Last -- <?php echo $username; ?></a></li>
 	        	<li><a href="<?php echo $rootDir ?>/controllers/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 	      	</ul>
-	      	<p class="navbar-text navbar-right">Welcome, FirstName LastName</p>
+	      	<p class="navbar-text navbar-right">Selected course: course_num</p>
 	    </div>
 	</nav>
 	

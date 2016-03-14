@@ -1,4 +1,5 @@
 <?php
+
 	if(isset($_SESSION["username"])){
 		if($_SESSION['username'] == ""){
 			$_SESSION['errormsg'] = "Please login to continue";
@@ -18,4 +19,5 @@
 	} else if(isset($_SESSION['selectedCourse'])){
 		$selectedCourse = $_SESSION['selectedCourse'];
 	} else $selectedCourse = "TLH";
+	
 ?>
