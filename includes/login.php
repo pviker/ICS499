@@ -29,7 +29,7 @@
 				  	</div>
 					<div class="form-group">
 <!-- 						    <label for="pwd">Password:</label> -->
-					    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					    <input type="password" class="form-control <?php echo $status; ?>" id="password" name="password" placeholder="Password">
 				  	</div>
 			<!-- 	  	<div class="checkbox"> -->
 			<!-- 	    	<label><input type="checkbox" id="saveUsername">Remember me</label> -->
