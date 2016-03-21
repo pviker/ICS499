@@ -22,10 +22,8 @@
         header("Location: ../index.php");
         exit;
 	} else {
-		while($row = mysqli_fetch_assoc($studentCoursesResult)) {
-								
-		echo "<li><a href='".$rootDir."view/course.php?courseID=".$row['courses_id']."'>"
-				.$row['course_num']."</a></li>";
+		while($row = mysqli_fetch_assoc($studentCoursesResult)) {						
+			echo "<li><a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."'>".$row['course_num']."</a></li>";
  		}
 	  }
 
