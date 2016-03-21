@@ -32,7 +32,7 @@
  	    $count = $row[0];
 	    
  	    if($count > 0) {
-	  
+ 	    	 
 			header("Location: ../view/landing.php");
 	        
  	    } else {

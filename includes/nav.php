@@ -1,28 +1,18 @@
 <?php 
 
-	require 'conditionalpermissions.php';
+	// checks if file system is on server and corrects root directory for absolute URL paths
+	$server = $_SERVER['SERVER_NAME'];
+	$pos = strpos($server, "localhost");
+	if ($pos !== false) {
+		$rootDir = "/thelearninghub/";
+	} else {
+		$rootDir = "";
+	}
 	
-	/** NOW INCLUDED IN REQUIRED SCRIPT ABOVE (/includes/conditionalpermissions.php) **/
+	//echo $_SERVER['DOCUMENT_ROOT'].$rootDir."view/content/forum/postreply.php";
 
-// 	if(isset($_SESSION["username"])){
-// 	 	if($_SESSION['username'] == ""){
-// 		 	$_SESSION['errormsg'] = "Please login to continue";
-// 		 	header("Location: " . $rootDir . "/index.php");
-// 		}
-// 	} else {
-// 		$_SESSION['errormsg'] = "Please login to continue";
-// 		header("Location: " . $rootDir . "/index.php");
-// 	}
-
-//  	if(isset($_SESSION['username'])){
-//  		$username = $_SESSION['username'];
-//  	} else $username = "No Username";
- 	
-//  	if(isset($_GET['courseID'])){
-//  		$selectedCourse = $_GET['courseID'];
-//  	} else if(isset($_SESSION['selectedCourse'])){
-//  		$selectedCourse = $_SESSION['selectedCourse'];
-//  	} else $selectedCourse = "TLH";
+	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/conditionalpermissions.php';
+	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getuserinfo.php';
 
 ?>
 
@@ -75,9 +65,7 @@
 	        		<ul class="dropdown-menu">
 	        			<li><a href="#">All Courses</a></li>
 				        <li role="separator" class="divider"></li>
-	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=1">Course 1</a></li>
-	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=2">Course 2</a></li>
-	            		<li><a href="<?php echo $rootDir ?>/view/course.php?courseID=3">Course 3</a></li>
+				        <?php require 'getcoursesnav.php'; ?>
 	        		</ul>
 	        	</li>
 	        	
@@ -128,10 +116,12 @@
 <!-- 	     		<li><a href="#">My Profile</a></li> -->
 	      	</ul>
 	      	<ul class="nav navbar-nav navbar-right">
-	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> First Last -- <?php echo $username; ?></a></li>
+	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['firstName']." ".$_SESSION['lastName']; ?></a></li>
 	        	<li><a href="<?php echo $rootDir ?>/controllers/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 	      	</ul>
-	      	<p class="navbar-text navbar-right">Selected course: course_num</p>
+	      	<?php if(isset($_SESSION['selectedCourse'])){ ?>
+	      		<p class="navbar-text navbar-right"> Selected course: <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></p>
+	      	<?php } ?>
 	    </div>
 	</nav>
 	

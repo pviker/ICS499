@@ -15,9 +15,7 @@
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
-							<a href="<?php echo $rootDir ?>/view/course.php?courseID=1" class="list-group-item">Course 1</a>
-							<a href="<?php echo $rootDir ?>/view/course.php?courseID=2" class="list-group-item">Course 2</a>
-							<a href="<?php echo $rootDir ?>/view/course.php?courseID=3" class="list-group-item">Course 3</a>
+				    		<?php require '../includes/getstudentcourses.php'; ?>
 						</div>
 				  	</div>
 				</div>
