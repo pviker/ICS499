@@ -18,9 +18,9 @@
 
 <div class="container-fluid">
 
-	<div class="jumbotron mainheader text-center">	
-		<h1 class="head-logo">The Learning Hub</h1>
-	</div>
+<!-- 	<div class="jumbotron mainheader text-center">	 -->
+<!-- 		<h1 class="head-logo">The Learning Hub</h1> -->
+<!-- 	</div> -->
 	
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
@@ -32,7 +32,7 @@
 	      	</button>
 	    <!-- 	<a class="navbar-brand" href="<?php //echo $rootDir ?>/view/course.php?courseID=<?php //echo $selectedCourse; ?>">
 	    		Course: <?php //echo $selectedCourse; ?></a> -->
-	    	<a class="navbar-brand" href="#">TLH</a>
+	    	<a class="navbar-brand" href="#">The Learning Hub</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	    	<ul class="nav navbar-nav">
@@ -48,7 +48,7 @@
 	        		}
 		        ?>
 		        
-	        	<li class="<?php echo $active; ?>"><a href="<?php echo $rootDir ?>/view/landing.php">Home</a></li>
+	        	<li class="<?php echo $active; ?>"><a href="<?php echo $rootDir ?>/view/landing.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 	        		        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
 	        		$pos = strpos($server, "course");
@@ -61,7 +61,7 @@
 		        ?>
 		        
 	        	<li class="dropdown <?php echo $active; ?>">
-	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses<span class="caret"> </span></a>
+	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Courses<span class="caret"> </span></a>
 	        		<ul class="dropdown-menu">
 	        			<li><a href="#">All Courses</a></li>
 				        <li role="separator" class="divider"></li>
@@ -82,7 +82,7 @@
 		        
 		        <?php if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ ?>
 		        	<li class="dropdown <?php echo $active; ?>">
-		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?><span class="caret"> </span></a>
+		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?><span class="caret"> </span></a>
 		          		<ul class="dropdown-menu">
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Class Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Discussion Forum</a></li>
@@ -107,7 +107,7 @@
 		        ?>
 		        
 	     		<li class="dropdown <?php echo $active; ?>">
-	         		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact<span class="caret"> </span></a>
+	         		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact<span class="caret"> </span></a>
 	          		<ul class="dropdown-menu">
 	            		<li><a href="#">Instructor</a></li>
 	            		<li><a href="#">Classmates</a></li>

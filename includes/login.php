@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
 	<div class="jumbotron mainheader">
-		<h1 class="text-center">Welcome to The Learning Hub</h1>
+		<h1 class="text-center">The Learning Hub</h1>
 	</div>
 	
 	<div class="row">
