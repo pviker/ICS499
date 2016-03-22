@@ -82,7 +82,7 @@
 		        
 		        <?php if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ ?>
 		        	<li class="dropdown <?php echo $active; ?>">
-		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Class Info<span class="caret"> </span></a>
+		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?><span class="caret"> </span></a>
 		          		<ul class="dropdown-menu">
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Class Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Discussion Forum</a></li>
@@ -119,9 +119,9 @@
 	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['firstName']." ".$_SESSION['lastName']; ?></a></li>
 	        	<li><a href="<?php echo $rootDir ?>/controllers/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 	      	</ul>
-	      	<?php if(isset($_SESSION['selectedCourse'])){ ?>
-	      		<p class="navbar-text navbar-right"> Selected course: <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></p>
-	      	<?php } ?>
+	      	<?php //if(isset($_SESSION['selectedCourse'])){ ?>
+	      		<!-- <p class="navbar-text navbar-right"> Selected course: <?php// include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></p> -->
+	      	<?php //} ?>
 	    </div>
 	</nav>
 	
