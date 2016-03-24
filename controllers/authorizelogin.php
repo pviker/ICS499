@@ -1,7 +1,7 @@
 <?php
 
 	if (!isset($_SESSION)) session_start();
-
+	$location = $_SERVER['DOCUMENT_ROOT'].$rootDir."/index.php";
 	require("db.php");
 	
 	// checks if submit button is clicked

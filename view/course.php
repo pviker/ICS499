@@ -6,9 +6,7 @@
 	if(isset($_GET['courseID'])){
 		$courseID = $_GET['courseID'];
 		$_SESSION['selectedCourse'] = $_GET['courseID'];
-	} else header("Location: landing.php");
-	
-
+	}
 
 ?>
 
@@ -21,22 +19,23 @@
 			    		<h3 class="panel-title"><?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?> Updates</h3>
 			  		</div>
 				  	<div class="panel-body">
-				    	<div class="alert alert-info alert-dismissible" role="alert">
-						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						  		<span aria-hidden="true">&times;</span>
-						  	</button>
-						  	<strong>Update!</strong> This is a dismissable update for course updates <br>
-						  		New line...<br>
-						  		New line...
-						</div>
-						<div class="alert alert-info alert-dismissible" role="alert">
-						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						  		<span aria-hidden="true">&times;</span>
-						  	</button>
-						  	<strong>Update!</strong> This is a dismissable update for course updates <br>
-						  		New line...<br>
-						  		New line...
-						</div>
+				  		<?php require '../includes/getcourseupdates.php'; ?>
+<!-- 				    	<div class="alert alert-info alert-dismissible" role="alert"> -->
+<!-- 						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+<!-- 						  		<span aria-hidden="true">&times;</span> -->
+<!-- 						  	</button> -->
+<!-- 						  	<strong>Update!</strong> This is a dismissable update for course updates <br> -->
+<!-- 						  		New line...<br> -->
+<!-- 						  		New line... -->
+<!-- 						</div> -->
+<!-- 						<div class="alert alert-info alert-dismissible" role="alert"> -->
+<!-- 						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+<!-- 						  		<span aria-hidden="true">&times;</span> -->
+<!-- 						  	</button> -->
+<!-- 						  	<strong>Update!</strong> This is a dismissable update for course updates <br> -->
+<!-- 						  		New line...<br> -->
+<!-- 						  		New line... -->
+<!-- 						</div> -->
 				  	</div>
 				</div>
 	    	</div>

@@ -13,7 +13,7 @@
 							from student_courses, courses, student
 							where student_courses.student_id=student.student_id
 							and student_courses.course_id=courses.courses_id
-							and student.student_id='".$studentid."'";
+							and student.student_id='".$studentid."' order by course_num";
 
 	$studentCoursesResult = mysqli_query($conn, $getStudentCourses);
 	
