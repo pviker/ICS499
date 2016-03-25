@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/24/16
+ * Filename: getforumposts.php
+ * Description: Retrieves from database discussion_post information
+ * 				based on selected course from user.
+ *
+ **************************************************************************/
+
+
 	if(isset($_SESSION['selectedCourse'])){
 		$selectedCourse = $_SESSION['selectedCourse'];
 	} else {
@@ -20,13 +33,16 @@
 	} else {
 		$counter = 1;
 		while($row = mysqli_fetch_assoc($results)) {
+			if($counter == 1){
+				$in = "in";
+			} else $in = "";
 			echo "<div class='panel panel-default'>
 						<div class='panel-heading forum' data-toggle='collapse' data-parent='#accordion' href='#collapse".$counter."'>
 							<h4 class='panel-title' style='padding-bottom: .3em'>
 								".$row['title']."
 							</h4>
 						</div>
-						<div id='collapse".$counter."' class='panel-collapse collapse in'>
+						<div id='collapse".$counter."' class='panel-collapse collapse ".$in."'>
 							<div class='panel-body'>
 								<p class='lead'>Post body</p>
 									<p>

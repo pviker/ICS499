@@ -1,4 +1,17 @@
 <?php
+
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/21/16
+ * Filename: getcourseassignments.php
+ * Description: This script retrieves from the database course information
+ * 				give the selected course by the user and echos it back
+ * 				in a formatted table.
+ *
+ *************************************************************************/
 	
 	if (!isset($_SESSION)) session_start();
 	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'controllers/db.php';

@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/17/16
+ * Filename: getcourseupdates.php
+ * Description: Retrieves from the database course updates
+ * 				based on selected course.
+ *
+ *****************************************************************/
 //	require '../controllers/db.php';
 
 	if(isset($_SESSION['selectedCourse'])){

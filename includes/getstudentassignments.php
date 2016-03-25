@@ -10,11 +10,13 @@
  * Description: Retrieves from the database student assignments
  * 				based on logged in user and course selected
  * 				by user.
- *
+ * 
  *****************************************************************/
 
+//////// THIS SCRIPT IS NOT COMPLETE, NEED TO FIGURE OUT HOW TO QUERY ALL 
+//////// ALL COURSES BASED ON STUDENT LOGGED IN AND DISPLAY ASSIGNMENTS
+//////// DUE IN THE NEXT 30 DAYS. (might need to reformat date in DB).
 
-//	require '../controllers/db.php';
 
 	if(isset($_SESSION['studentid'])){
 		$studentid = $_SESSION['studentid'];
@@ -27,7 +29,7 @@
 							from student_courses, courses, student
 							where student_courses.student_id=student.student_id
 							and student_courses.course_id=courses.courses_id
-							and student.student_id='".$studentid."' order by course_num";
+							and student.student_id='".$studentid."'order by course_num";
 
 	$studentCoursesResult = mysqli_query($conn, $getStudentCourses);
 	
@@ -36,8 +38,9 @@
         header("Location: ../index.php");
         exit;
 	} else {
-		while($row = mysqli_fetch_assoc($studentCoursesResult)) {						
-			echo "<li><a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."'>".$row['course_num']."</a></li>";
+		while($row = mysqli_fetch_assoc($studentCoursesResult)) {
+			echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>".$row['course_num']." -
+					".$row['course_name']."</a>";
  		}
 	  }
 

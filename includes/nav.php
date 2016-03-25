@@ -1,5 +1,18 @@
 <?php 
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/17/16
+ * Filename: nav.php
+ * Description: This is the navigation header placed on all 
+ * 				VIEW pages, requires DB to retrieve courses
+ * 				for logged in user.
+ *
+ *****************************************************************/
+
 	// checks if file system is on server and corrects root directory for absolute URL paths
 	$server = $_SERVER['SERVER_NAME'];
 	$pos = strpos($server, "localhost");

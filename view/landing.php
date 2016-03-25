@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/21/16
+ * Filename: landing.php
+ * Description: This is the primary VIEW landing page after
+ * 				a user successfully logs in.
+ *
+ *****************************************************************/
+
 	include '../includes/header.php';
 	include '../includes/nav.php';
 

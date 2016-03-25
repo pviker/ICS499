@@ -1,3 +1,17 @@
+<?php 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 2/23/16
+ * Filename: login.php
+ * Description: Static VIEW login page for user going to site.
+ * 				This is a included file in the index.php
+ *
+ *****************************************************************/
+?>
+
 
 <div class="container-fluid">
 

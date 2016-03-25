@@ -1,11 +1,17 @@
 <?php
 
 /**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 2/23/16
  * Filename: session.php
  * Description: Starts session if not already created. 
- * 				Also checks SERVER_NAME to designate file system control w/r/t local vs. server environment
- * 
- * **/
+ * 				Also checks SERVER_NAME to designate file system 
+ * 				control w/r/t local vs. server environment
+ *
+ *************************************************************************/
 
 	// header for all pages
 	if (!isset($_SESSION)) session_start();

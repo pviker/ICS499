@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/13/16
+ * Filename: conditionalpermissions.php
+ * Description: Server side login form validation, 
+ *
+ **********************************************************************/
 	
 	$location = $_SERVER['DOCUMENT_ROOT'].$rootDir."/index.php";
 

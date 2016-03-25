@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/17/16
+ * Filename: getuserinfo.php
+ * Description: Retrieves from the database user login information
+ * 				sets session variables: first, last name, student_id
+ *
+ *****************************************************************/
+
 	if (!isset($_SESSION)) session_start();
 		// checks if file system is on server and corrects root directory for absolute URL paths
 	$server = $_SERVER['SERVER_NAME'];

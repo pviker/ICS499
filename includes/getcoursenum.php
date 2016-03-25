@@ -1,6 +1,16 @@
 <?php
 
-//	require '../controllers/db.php';
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/21/16
+ * Filename: getcoursenum.php
+ * Description: This script gets a course_num from the 
+ * 				courses_id selected by a user then echos it back
+ * 
+ *************************************************************************/
 
 	if(isset($_SESSION['studentid'])){
 		$studentid = $_SESSION['studentid'];

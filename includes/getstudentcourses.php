@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 3/21/16
+ * Filename: getstudentcourses.php
+ * Description: Retrieves from the database student courses
+ * 				based on logged in user.
+ *
+ *****************************************************************/
+
 //	require '../controllers/db.php';
 
 	if(isset($_SESSION['studentid'])){
@@ -13,7 +25,7 @@
 							from student_courses, courses, student
 							where student_courses.student_id=student.student_id
 							and student_courses.course_id=courses.courses_id
-							and student.student_id='".$studentid."'";
+							and student.student_id='".$studentid."'order by course_num";
 
 	$studentCoursesResult = mysqli_query($conn, $getStudentCourses);
 	
@@ -23,7 +35,8 @@
         exit;
 	} else {
 		while($row = mysqli_fetch_assoc($studentCoursesResult)) {
-			echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>".$row['course_num']."</a>";
+			echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>".$row['course_num']." -
+					".$row['course_name']."</a>";
  		}
 	  }
 

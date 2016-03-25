@@ -1,4 +1,17 @@
 <?php
+
+/**
+ * Programmer: Patrick Viker
+ * Team: ETC.
+ * Instructor: Michael Dorin
+ * Project: Capstone
+ * Date: 2/23/16
+ * Filename: header.php
+ * Description: This is the main header required on all VIEW pages
+ * 				(DOCTYPE, html, head, body, JS, CSS)
+ *
+ *****************************************************************/
+
 	// header for all pages
 	if (!isset($_SESSION)) session_start();
 	
