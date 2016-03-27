@@ -34,12 +34,15 @@
 		exit;
 	} else {
 		while($row = mysqli_fetch_assoc($results)) {
-			echo "<div class='panel-heading forum' data-toggle='collapse' data-parent='#accordion' href='#collapse1'>
+			echo "<div class='panel-heading'>
 						<h4 class='panel-title'>".$row['title']."</h4>
 				  </div>
 				  <div id='collapse1' class='panel-collapse collapse in'>
 						<div class='panel-body'>".$row['body']."</div>
-				  </div>";
+				  </div>&nbsp;&nbsp;
+				  <a href='postreply.php?postID=".$postID."' style='color:black'>
+				  		<span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply to post
+				  </a>";
 		}
 	}
 

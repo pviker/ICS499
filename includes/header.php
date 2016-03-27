@@ -52,7 +52,20 @@
 		<link href='<?php echo $rootDir ?>/styles/colorscheme.css' rel='stylesheet' type='text/css'>
 		
 		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  		<script>tinymce.init({ selector:'textarea' });</script>
+  		<script>
+  			tinymce.init({ 
+  	  			selector:'textarea',
+  	  			auto_focus: 'txtarea',
+  	  			statusbar: false,
+  	  			theme: 'modern',
+	  	  		menu: {
+		  	  	    file: {title: 'File', items: ''},
+		  	  	    edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+		  	  	    view: {title: 'View', items: ''},
+		  	  	    format: {title: 'Format', items: 'bold italic underline strikethrough superscript subscript | formats | removeformat'}
+	  	  	   }
+  	  	  	});
+  		</script>
 		
 	</head>
 

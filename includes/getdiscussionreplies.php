@@ -54,7 +54,7 @@
 			}
 			
 			echo "<div class='panel panel-default'>
-					  <div class='panel-heading forum'>
+					  <div class='panel-heading'>
 						  <h5 class='panel-title'>Posted by: ".$firstName." ".$lastName." on ".$date."</h4>
 				  	  </div>				 
 						  <div class='panel-body'>".$body."</div>
