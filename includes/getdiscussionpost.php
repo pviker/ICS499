@@ -22,6 +22,18 @@
 	
 	$postID = $_GET['postID'];
 	
+	$server = $_SERVER['PHP_SELF'];
+	$pos = strpos($server, "postreply");
+	
+	// if we're in postreply.php script do NOT echo reply link
+	if ($pos !== false) {
+		$replyToPost = "";
+	} else {
+		$replyToPost = "<a href='postreply.php?postID=".$postID."' style='color:black'>
+				  			<span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply to post
+				  		</a>";
+	}
+	
 	$query = "SELECT title, body, date FROM discussion_post where discussion_post_id=".$postID;
 	
 	$results = mysqli_query($conn, $query);
@@ -40,9 +52,7 @@
 				  <div id='collapse1' class='panel-collapse collapse in'>
 						<div class='panel-body'>".$row['body']."</div>
 				  </div>&nbsp;&nbsp;
-				  <a href='postreply.php?postID=".$postID."' style='color:black'>
-				  		<span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply to post
-				  </a>";
+				  ".$replyToPost;
 		}
 	}
 

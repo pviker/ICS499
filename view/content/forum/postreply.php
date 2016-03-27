@@ -40,16 +40,18 @@
 				    	<div class="list-group">
 							<div class="panel-group" id="accordion">
 						    	<div class="panel panel-default">
-						    		<textarea id="txtarea"></textarea><br>
-						    		<div class="row">
-						    			<div class="col-sm-4"></div>
-							    		<div class="col-sm-4">
-							    			<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
-						 						Submit
-						 					</button>
-						 				</div>
-						 				<div class="col-sm-4"></div>
-						 			</div>
+						    		<form method="post" action="../../../controllers/submitreply.php">
+						    			<textarea id="txtarea" name="txtarea"></textarea><br>
+							    		<div class="row">
+							    			<div class="col-sm-4"></div>
+								    		<div class="col-sm-4">
+								    			<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
+							 						Submit
+							 					</button>
+							 				</div>
+							 				<div class="col-sm-4"></div>
+							 			</div>
+							 		</form>
 					    		</div>
 					  		</div>
 						</div>
