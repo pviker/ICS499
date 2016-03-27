@@ -44,7 +44,6 @@
 						</div>
 						<div id='collapse".$counter."' class='panel-collapse collapse ".$in."'>
 							<div class='panel-body'>
-								<p class='lead'>Post body</p>
 									<p>
 										".$row['body']."
 									</p>
@@ -53,8 +52,10 @@
 										<span class='glyphicon glyphicon-option-horizontal' aria-hidden='true'></span>
 									</button>
 									<ul class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-										<li><a href='forum/postview.php?postID=".$row['discussion_post_id']."'><span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> View</a></li>
-										<li><a href='forum/postreply.php?postID=".$row['discussion_post_id']."'><span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply</a></li>
+										<li><a href='forum/postview.php?postID=".$row['discussion_post_id']."'>
+												<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> View student replies</a></li>
+										<li><a href='forum/postreply.php?postID=".$row['discussion_post_id']."'>
+												<span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply to post</a></li>
 									</ul>
 								</div>
 							</div>
