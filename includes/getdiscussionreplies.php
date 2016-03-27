@@ -22,7 +22,7 @@
 	
 	$postID = $_GET['postID'];
 	
-	$query = "SELECT student_id, title, body, date FROM discussion_reply where discussion_post_id=".$postID;
+	$query = "SELECT student_id, title, body, date, time FROM discussion_reply where discussion_post_id=".$postID;
 	
 	$results = mysqli_query($conn, $query);
 	
@@ -39,6 +39,7 @@
 			$title = $row['title'];
 			$body = $row['body'];
 			$date = $row['date'];
+			$time = $row['time'];
 			
 			$query2 = "SELECT first_name, last_name from student where student_id=".$student_id;
 			$results2 = mysqli_query($conn, $query2);
@@ -59,7 +60,7 @@
 						  <h5 class='panel-title'>" . $title . "</small></h6>
 						  <h6 class='panel-title'>
 						  		<small>
-						  			Posted by: ".$firstName." ".$lastName." on ".$date."
+						  			Posted by <strong>".$firstName." ".$lastName."</strong> on ".$date." at ".$time."
 						  		</small>
 						  </h6>
 				  	  </div>				 
