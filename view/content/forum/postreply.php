@@ -40,14 +40,21 @@
 				    	<div class="list-group">
 							<div class="panel-group" id="accordion">
 						    	<div class="panel panel-default">
-						    		<form method="post" action="../../../controllers/submitreply.php">
-						    			<textarea id="txtarea" name="txtarea"></textarea><br>
+						    		<form role="form" method="post" action="../../../controllers/submitreply.php?postID=<?php echo $_GET['postID']; ?>">
+						    			<div class='panel-heading'>
+							    			<div class="form-group">
+											    <input type="text" class="form-control" id="title" name="title" placeholder="Post Title">
+										  	</div>
+									  	</div>
+									  	<div style="margin-left: 1em; margin-right: 1em;">
+						    				<textarea id="txtarea" name="txtarea" placeholder="Post Body" ></textarea><br>
+							    		</div>
 							    		<div class="row">
 							    			<div class="col-sm-4"></div>
 								    		<div class="col-sm-4">
 								    			<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
 							 						Submit
-							 					</button>
+							 					</button><br>
 							 				</div>
 							 				<div class="col-sm-4"></div>
 							 			</div>

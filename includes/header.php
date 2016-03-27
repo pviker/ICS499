@@ -52,12 +52,13 @@
 		<link href='<?php echo $rootDir ?>/styles/colorscheme.css' rel='stylesheet' type='text/css'>
 		
 		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+		<script src="<?php echo $rootDir ?>/scripts/plugin.js"></script>
   		<script>
   			tinymce.init({ 
   	  			selector:'textarea',
-  	  			auto_focus: 'txtarea',
   	  			statusbar: false,
   	  			theme: 'modern',
+  	  	     	plugins: [ "placeholder" ],
 	  	  		menu: {
 		  	  	    file: {title: 'File', items: ''},
 		  	  	    edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},

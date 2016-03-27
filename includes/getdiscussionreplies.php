@@ -36,6 +36,7 @@
 		while($row = mysqli_fetch_assoc($results)) {
 			
 			$student_id = $row['student_id'];
+			$title = $row['title'];
 			$body = $row['body'];
 			$date = $row['date'];
 			
@@ -55,7 +56,12 @@
 			
 			echo "<div class='panel panel-default'>
 					  <div class='panel-heading'>
-						  <h5 class='panel-title'>Posted by: ".$firstName." ".$lastName." on ".$date."</h4>
+						  <h5 class='panel-title'>" . $title . "</small></h6>
+						  <h6 class='panel-title'>
+						  		<small>
+						  			Posted by: ".$firstName." ".$lastName." on ".$date."
+						  		</small>
+						  </h6>
 				  	  </div>				 
 						  <div class='panel-body'>".$body."</div>
 				  </div>";
