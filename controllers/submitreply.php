@@ -18,10 +18,10 @@
 
 	/// insert into plans
 	if(mysqli_query($conn, $insert)){
-		$_SESSION['message'] = "Admin organization plan templated saved!";
+		$_SESSION['msg'] = "Your reply has posted successfully!";
 		header("Location: ../view/content/forum/postview.php?postID=".$id);
 	} else {
-		$_SESSION['message'] = "Admin organization plan templated saved!";
+		$_SESSION['errormsg'] = "There was an error posting your reply, please try again";
 		header("Location: ../view/content/forum/postview.php?postID=".$id);
 	}
 	

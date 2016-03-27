@@ -29,9 +29,9 @@
 	if ($pos !== false) {
 		$replyToPost = "";
 	} else {
-		$replyToPost = "<a href='postreply.php?postID=".$postID."' style='color:black'>
+		$replyToPost = "<a href='postreply.php?postID=".$postID."' style='color:black' class='btn btn-default'>
 				  			<span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Reply to post
-				  		</a>";
+				  		</a><br><br>";
 	}
 	
 	$query = "SELECT title, body, date FROM discussion_post where discussion_post_id=".$postID;
