@@ -120,13 +120,15 @@
 	        		}
 		        ?>
 		        
+		        <?php if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ ?>
 	     		<li class="dropdown <?php echo $active; ?>">
 	         		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact<span class="caret"> </span></a>
 	          		<ul class="dropdown-menu">
-	            		<li><a href="#">Instructor</a></li>
-	            		<li><a href="#">Classmates</a></li>
+	            		<li><a href="<?php echo $rootDir ?>/view/contact/instructor.php?courseID=<?php echo $courseID; ?>">Instructor</a></li>
+	            		<li><a href="<?php echo $rootDir ?>/view/contact/classmates.php?courseID=<?php echo $courseID; ?>">Classmates</a></li>
 	          		</ul>
 	        	</li>
+	        	<?php } ?>
 <!-- 	     		<li><a href="#">My Profile</a></li> -->
 	      	</ul>
 	      	<ul class="nav navbar-nav navbar-right">

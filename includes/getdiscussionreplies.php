@@ -44,17 +44,10 @@
 			$query2 = "SELECT first_name, last_name from student where student_id=".$student_id;
 			$results2 = mysqli_query($conn, $query2);
 			
-			if(!$results2){
-				$_SESSION["errormsg"] = "ERROR: Can't get course updates info";
-				//header("Location: ../index.php");
-				exit;
-			} else {
-				while($row = mysqli_fetch_assoc($results2)) {
-					$firstName = $row['first_name'];
-					$lastName = $row['last_name'];
-				}
-			}
-			
+			$row = mysqli_fetch_assoc($results2);
+				$firstName = $row['first_name'];
+				$lastName = $row['last_name'];
+
 			echo "<div class='panel panel-default'>
 					  <div class='panel-heading'>
 						  <h5 class='panel-title'>" . $title . "</small></h6>
