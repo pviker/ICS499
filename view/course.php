@@ -20,22 +20,6 @@
 			  		</div>
 				  	<div class="panel-body">
 				  		<?php require '../includes/getcourseupdates.php'; ?>
-<!-- 				    	<div class="alert alert-info alert-dismissible" role="alert"> -->
-<!-- 						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
-<!-- 						  		<span aria-hidden="true">&times;</span> -->
-<!-- 						  	</button> -->
-<!-- 						  	<strong>Update!</strong> This is a dismissable update for course updates <br> -->
-<!-- 						  		New line...<br> -->
-<!-- 						  		New line... -->
-<!-- 						</div> -->
-<!-- 						<div class="alert alert-info alert-dismissible" role="alert"> -->
-<!-- 						 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
-<!-- 						  		<span aria-hidden="true">&times;</span> -->
-<!-- 						  	</button> -->
-<!-- 						  	<strong>Update!</strong> This is a dismissable update for course updates <br> -->
-<!-- 						  		New line...<br> -->
-<!-- 						  		New line... -->
-<!-- 						</div> -->
 				  	</div>
 				</div>
 	    	</div>

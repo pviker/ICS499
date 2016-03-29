@@ -4,6 +4,11 @@
 	background-color: #C8B197;
 }*/
 
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    border-radius: 0;
+}
+
 .head-logo {
     /*-ms-transform: rotate(-7deg); /* IE 9 */
     /*-webkit-transform: rotate(-7deg); *//* Chrome, Safari, Opera */

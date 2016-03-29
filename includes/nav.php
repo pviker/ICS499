@@ -29,7 +29,7 @@
 
 ?>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
 
 <!-- 	<div class="jumbotron mainheader text-center">	 -->
 <!-- 		<h1 class="head-logo">The Learning Hub</h1> -->
@@ -141,4 +141,4 @@
 	    </div>
 	</nav>
 	
-</div>
+<!-- </div> -->
