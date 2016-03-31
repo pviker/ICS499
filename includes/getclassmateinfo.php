@@ -25,36 +25,36 @@
 		$courseID = $_SESSION['selectedCourse'];
 	} 
 
-	$query = "select instructor_id from courses where courses_id=".$courseID;
+	$query = "select student_id from student_courses where course_id=".$courseID;
 	$results = mysqli_query($conn, $query);
 	
 	if(!$results) {
-    	$_SESSION["errormsg"] = "ERROR: Can't get course_num";
-       header("Location: ../index.php");
-        exit;
-	} else {
-		$row = mysqli_fetch_assoc($results);
-		$instructorID = $row['instructor_id'];
-	}
-	  
-	$query = "select first_name, last_name, email from instructor where instructor_id=".$instructorID;
-	$results = mysqli_query($conn, $query);
-	
-	if(!$results) {
-		$_SESSION["errormsg"] = "ERROR: Can't get course_num";
-		header("Location: ../index.php");
+		$_SESSION["errormsg"] = "ERROR: Can't get user info";
+		// header("Location: ../index.php");
 		exit;
 	} else {
-		$row = mysqli_fetch_assoc($results);
-		$firstName = $row['first_name'];
-		$lastName = $row['last_name'];
-		$email = $row['email'];
-	}
-	
-	echo "<tr>".
+		while($row = mysqli_fetch_assoc($results)) {
+			$query2 = "select first_name, last_name, email from student where student_id=".$row['student_id'];
+			$results2 = mysqli_query($conn, $query2);
+			
+			if(!$results2){
+				$_SESSION["errormsg"] = "ERROR: Can't get course_num";
+				header("Location: ../index.php");
+				exit;
+			} else {
+				$row = mysqli_fetch_assoc($results2);
+				$firstName = $row['first_name'];
+				$lastName = $row['last_name'];
+				$email = $row['email'];
+				
+				echo "<tr>".
 						"<td>".$firstName." ".$lastName."</td>".
 						"<td><a href='mailto:" . $email . "' target='_top' style='color:black'>" . $email . "</a></td>".
 					 "</tr>";
+			}
+		}
+	 }
+
 
 
 ?>
