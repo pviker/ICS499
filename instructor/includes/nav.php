@@ -43,9 +43,9 @@
 	        	<span class="icon-bar"> </span>     
 	        	<span class="icon-bar"> </span>                     
 	      	</button>
-	    <!-- 	<a class="navbar-brand" href="<?php //echo $rootDir ?>/view/course.php?courseID=<?php //echo $selectedCourse; ?>">
+	    <!-- 	<a class="navbar-brand" href="<?php //echo $rootDir ?>/instructor/view/course.php?courseID=<?php //echo $selectedCourse; ?>">
 	    		Course: <?php //echo $selectedCourse; ?></a> -->
-	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/view/landing.php">The Learning Hub</a>
+	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/instructor/view/landing.php">The Learning Hub <small>(Instructor Portal)</small></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	    	<ul class="nav navbar-nav">
@@ -61,7 +61,7 @@
 	        		}
 		        ?>
 		        
-	        	<li class="<?php echo $active; ?>"><a href="<?php echo $rootDir ?>/view/landing.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+	        	<li class="<?php echo $active; ?>"><a href="<?php echo $rootDir ?>/instructor/view/landing.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 	        	
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
@@ -77,7 +77,7 @@
 	        	<li class="dropdown <?php echo $active; ?>">
 	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Courses<span class="caret"> </span></a>
 	        		<ul class="dropdown-menu">
-				        <?php require 'getcoursesnav.php'; ?>
+				        <?php require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursesnav.php'; ?>
 	        		</ul>
 	        	</li>
 	        	

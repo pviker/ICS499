@@ -33,8 +33,8 @@
 	    
  	    if($count > 0) {
  	    	 
-			header("Location: ../view/landing.php");
-	        
+			//header("Location: ../view/landing.php");
+	        header("Location: checkusertype.php");
  	    } else {
 	      	
  			$_SESSION["errormsg"] = "Your username or password are not correct. Please try again.";

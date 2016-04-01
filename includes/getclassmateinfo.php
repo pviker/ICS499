@@ -34,7 +34,7 @@
 		exit;
 	} else {
 		while($row = mysqli_fetch_assoc($results)) {
-			$query2 = "select first_name, last_name, email from student where student_id=".$row['student_id'];
+			$query2 = "select first_name, last_name, email from student where student_id=".$row['student_id']." order by last_name";
 			$results2 = mysqli_query($conn, $query2);
 			
 			if(!$results2){
