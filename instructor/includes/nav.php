@@ -57,7 +57,7 @@
 	        	
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
-	        		$pos = strpos($server, "course");
+	        		$pos = strpos($server, "course.php");
 	        		
 	        		if ($pos !== false) {
 	        			$active = "active";
@@ -91,7 +91,7 @@
 		          			<span class="caret"> </span>
 		          		</a>
 		          		<ul class="dropdown-menu">
-			          		<li><a href="<?php echo $rootDir ?>/instructor/view/addcourseupdate.php">Add Course Update</a></li>
+			          		<li><a href="<?php echo $rootDir ?>/instructor/view/content/addcourseupdate.php">Add Course Update</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Add Course Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Add Discussion Post</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Add Assignments</a></li>
