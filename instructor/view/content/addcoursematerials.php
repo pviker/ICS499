@@ -44,13 +44,16 @@
 						
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
-							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="Title">
+								<label for="title">Course materials title</label>
+							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="ie. syllabus">
 						  	</div>
 						  	<div class="form-group">
-						  		<input class="form-control" type="file" name="myFile" />
+						  		<label for="fileinput">File input</label>
+						  		<input class="" type="file" name="myFile" id="fileinput"/>
+						  		<p class="help-block">Upload your document (valid filetypes: .pdf, .jpg, .doc, .txt)</p>
 						  	</div>
 						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
-						 		Submit
+						 		Upload
 						 	</button>
 						</form>
 				  	</div>
