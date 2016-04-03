@@ -16,7 +16,7 @@
 		$studentid = $_SESSION['studentid'];
 	} else {
 		$_SESSION['errormsg'] = "Can't retrieve courses.";
-		header("Location: ../index.php");
+//		header("Location: ../index.php");
 	}
 	
 	if(isset($_GET['courseID'])){

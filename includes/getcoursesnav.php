@@ -35,7 +35,7 @@
 			$studentid = $_SESSION['studentid'];
 		} else {
 			$_SESSION['errormsg'] = "Can't retrieve courses.";
-			header("Location: ../index.php");
+//			header("Location: ../index.php");
 		}
 	
 		$getStudentCourses = "select courses.courses_id, courses.course_num, courses.course_name
@@ -48,7 +48,7 @@
 		
 		if(!$studentCoursesResult) {
 	    	$_SESSION["errormsg"] = "ERROR: Can't get user info";
-	        header("Location: ../index.php");
+//	        header("Location: ../index.php");
 	        exit;
 		} else {
 			while($row = mysqli_fetch_assoc($studentCoursesResult)) {						

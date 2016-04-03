@@ -10,7 +10,7 @@
 				echo "There was an error getting courses";
 			} else {
 				while($row = mysqli_fetch_assoc($result)) {
-					echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>"
+					echo "<a href='".$rootDir."/instructor/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>"
 							.$row['course_num']."</a>";
 				}
 			}

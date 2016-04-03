@@ -24,8 +24,8 @@
 	
 	//echo $_SERVER['DOCUMENT_ROOT'].$rootDir."view/content/forum/postreply.php";
 
-	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/conditionalpermissions.php';
-	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getuserinfo.php';
+	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'instructor/includes/conditionalpermissions.php';
+	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'instructor/includes/getuserinfo.php';
 
 ?>
 
@@ -96,10 +96,10 @@
 		        	<li class="dropdown <?php echo $active; ?>">
 		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?><span class="caret"> </span></a>
 		          		<ul class="dropdown-menu">
-			          		<li><a href="<?php echo $rootDir ?>/view/course.php">Course Updates</a></li>
-					       		<li role="separator" class="divider"></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Class Materials</a></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Discussion Forum</a></li>
+			          		<li><a href="<?php echo $rootDir ?>/view/course.php">Add Course Update</a></li>
+				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Add Course Materials</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Add Discussion Post</a></li>
 				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Assignments</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/dropbox.php">Dropbox</a></li>
