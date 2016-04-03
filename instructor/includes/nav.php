@@ -28,12 +28,6 @@
 	require $_SERVER['DOCUMENT_ROOT'].$rootDir.'instructor/includes/getuserinfo.php';
 
 ?>
-
-<!-- <div class="container-fluid"> -->
-
-<!-- 	<div class="jumbotron mainheader text-center">	 -->
-<!-- 		<h1 class="head-logo">The Learning Hub</h1> -->
-<!-- 	</div> -->
 	
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
@@ -43,8 +37,6 @@
 	        	<span class="icon-bar"> </span>     
 	        	<span class="icon-bar"> </span>                     
 	      	</button>
-	    <!-- 	<a class="navbar-brand" href="<?php //echo $rootDir ?>/instructor/view/course.php?courseID=<?php //echo $selectedCourse; ?>">
-	    		Course: <?php //echo $selectedCourse; ?></a> -->
 	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/instructor/view/landing.php">The Learning Hub <small>(Instructor Portal)</small></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
@@ -77,7 +69,7 @@
 	        	<li class="dropdown <?php echo $active; ?>">
 	          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Courses<span class="caret"> </span></a>
 	        		<ul class="dropdown-menu">
-				        <?php require $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursesnav.php'; ?>
+				        <?php require $_SERVER['DOCUMENT_ROOT'].$rootDir.'instructor/includes/getcoursesnav.php'; ?>
 	        		</ul>
 	        	</li>
 	        	
@@ -94,9 +86,12 @@
 		        
 		        <?php if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ ?>
 		        	<li class="dropdown <?php echo $active; ?>">
-		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?><span class="caret"> </span></a>
+		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;
+		          			<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?>
+		          			<span class="caret"> </span>
+		          		</a>
 		          		<ul class="dropdown-menu">
-			          		<li><a href="<?php echo $rootDir ?>/view/course.php">Add Course Update</a></li>
+			          		<li><a href="<?php echo $rootDir ?>/instructor/view/addcourseupdate.php">Add Course Update</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Add Course Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Add Discussion Post</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Add Assignments</a></li>
