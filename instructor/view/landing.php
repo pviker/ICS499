@@ -27,7 +27,7 @@
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
-				    		<?php //require '../../includes/getstudentcourses.php'; ?>
+				    		<?php require '../includes/getcourses.php'; ?>
 						</div>
 				  	</div>
 				</div>
