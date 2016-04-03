@@ -15,12 +15,17 @@ if(isset($_POST["btn-upload"])) {
     $file_content = addslashes($file_content);
     fclose($open_file);
     
-    
+    if($file_size > 0) {
     
     $insert_query = "insert into dropbox (file_name, file_type, file_size, file_content) values
     ('" . $file_name . "','" . $file_type . "','" . $file_size . "','" . $file_content . "')";
     
     mysqli_query($conn, $insert_query);
+    
+    } else {
+        
+        echo "File not uploaded.";
+    }
         
 }
 
