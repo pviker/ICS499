@@ -1,6 +1,5 @@
 <?php 
 
-	
 	if(isset($_SESSION['instructorFlag'])){
 		if($_SESSION['instructorFlag'] == 1) {
 			
@@ -11,14 +10,11 @@
 				echo "There was an error getting courses";
 			} else {
 				while($row = mysqli_fetch_assoc($result)) {
-					echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."'>".$row['course_num']."</a>";
-				
-// 					echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>".$row['course_num']." -
-// 					".$row['course_name']."</a>";
+					echo "<a href='".$rootDir."/view/course.php?courseID=".$row['courses_id']."' class='list-group-item'>"
+							.$row['course_num']."</a>";
 				}
 			}
 		}
 	}
-		
-		
+	
 ?>

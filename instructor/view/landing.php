@@ -30,7 +30,7 @@
 				    		<?php require '../includes/getcourses.php'; ?>
 						</div>
 				  	</div>
-				</div>
+				</div>	
 	    	</div>
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
