@@ -34,23 +34,26 @@
 		
 		<!-- FORM START -->
 		<div class="row">
-	    	<div class="col-sm-6">
+	    	<div class="col-sm-6 col-sm-offset-3">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Add an update for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
+			    		<h3 class="panel-title">Add course materials for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
 			  		</div>
 				  	<div class="panel-body">
-						<form role="form" 
-							action="<?php echo $rootDir ?>/instructor/controllers/courseupdate.php" method="post">
+						<form role="form" action="<?php echo $rootDir ?>/instructor/controllers/materialupdate.php" method="post" enctype="multipart/form-data">
+						
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
-							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="Title">
+								<label for="title">Course materials title</label>
+							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="ie. syllabus">
 						  	</div>
-							<div class="form-group">
-								<textarea id="txtarea" name="txtarea" placeholder="Update Description" ></textarea><br>	    		
+						  	<div class="form-group">
+						  		<label for="fileinput">File input</label>
+						  		<input class="" type="file" name="myFile" id="fileinput"/>
+						  		<p class="help-block">Upload your document (valid filetypes: .pdf, .jpg, .doc, .txt)</p>
 						  	</div>
-						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
-						 		Submit
+						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black; " >
+						 		Upload
 						 	</button>
 						</form>
 				  	</div>
@@ -58,29 +61,7 @@
 	    	</div>
 	    	<!-- FORM END -->
 	    	
-		   	<div class="col-sm-6">
-	    		<div class="panel panel-primary" style="border-color: #696053;">
-			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Course Updates</h3>
-			  		</div>
-				  	<div class="panel-body">
-				    	<div class="list-group">
-							<div class="panel-group" id="accordion">
-								<div class='panel panel-default'>
-									<div class='panel-heading forum' data-toggle='collapse' data-parent='#accordion' href='#collapse'>
-										<h4>View Current Course Updates</h4>
-									</div>
-									<div id='collapse' class='panel-collapse collapse'>
-										<div class='panel-body'>
-											<?php require '../../includes/getcourseupdates.php';?>
-										</div>
-									</div>
-								</div>
-						  	</div>
-						</div>
-			  		</div>
-				</div>
-	    	</div>
+		   	
 		</div>
 	</div>
 

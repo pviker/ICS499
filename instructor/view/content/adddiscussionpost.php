@@ -37,11 +37,11 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Add an update for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
+			    		<h3 class="panel-title">Add a discussion topic for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
 			  		</div>
 				  	<div class="panel-body">
 						<form role="form" 
-							action="<?php echo $rootDir ?>/instructor/controllers/courseupdate.php" method="post">
+							action="<?php echo $rootDir ?>/instructor/controllers/submitpost.php" method="post">
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
 							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="Title">
@@ -66,16 +66,7 @@
 				  	<div class="panel-body">
 				    	<div class="list-group">
 							<div class="panel-group" id="accordion">
-								<div class='panel panel-default'>
-									<div class='panel-heading forum' data-toggle='collapse' data-parent='#accordion' href='#collapse'>
-										<h4>View Current Course Updates</h4>
-									</div>
-									<div id='collapse' class='panel-collapse collapse'>
-										<div class='panel-body'>
-											<?php require '../../includes/getcourseupdates.php';?>
-										</div>
-									</div>
-								</div>
+								<?php include '../../includes/getinstructorposts.php';?>
 						  	</div>
 						</div>
 			  		</div>

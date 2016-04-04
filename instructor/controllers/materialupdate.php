@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?
 
 include ("../controllers/db.php");
@@ -36,3 +37,6 @@ if(isset($_POST["btn-upload"])) {
 }
 
 ?>
+=======
+<?php
+>>>>>>> origin/master

@@ -32,6 +32,7 @@
 	
 	if(isset($_GET['courseID'])){
 		$selectedCourse = $_GET['courseID'];
+		$_SESSION['selectedCourse'] = $_GET['courseID'];
 	} else if(isset($_SESSION['selectedCourse'])){
 		$selectedCourse = $_SESSION['selectedCourse'];
 	} else $selectedCourse = "TLH";
