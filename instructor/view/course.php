@@ -23,11 +23,15 @@
 	    	<div class="col-sm-6 col-sm-offset-3">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Select Course</h3>
+			    		<h3 class="panel-title">What would you like to do?</h3>
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
-				    		<?php require '../includes/getcourses.php'; ?>
+				    		<ul class="nav nav-pills">
+							  <li role="presentation" class="active"><a href="#">Home</a></li>
+							  <li role="presentation"><a href="#">Profile</a></li>
+							  <li role="presentation"><a href="#">Messages</a></li>
+							</ul>
 						</div>
 				  	</div>
 				</div>	

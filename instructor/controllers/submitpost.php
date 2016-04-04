@@ -20,10 +20,10 @@
 	if(mysqli_query($conn, $insert)){
 		$_SESSION['msg'] = "Your discussion topic has posted successfully!";
 		echo "good";
-//		header("Location: ../view/content/adddiscussionpost.php");
+		header("Location: ../view/content/adddiscussionpost.php");
 	} else {
 		$_SESSION['errormsg'] = "There was an error posting discussion topic, please try again";
-//		header("Location: ../view/content/adddiscussionpost.php");
+		header("Location: ../view/content/adddiscussionpost.php");
 	}
 	
 ?>

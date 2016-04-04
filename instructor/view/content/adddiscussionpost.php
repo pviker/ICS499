@@ -44,10 +44,10 @@
 							action="<?php echo $rootDir ?>/instructor/controllers/submitpost.php" method="post">
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
-							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="Title">
+							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="Discussion Topic">
 						  	</div>
 							<div class="form-group">
-								<textarea id="txtarea" name="txtarea" placeholder="Update Description" ></textarea><br>	    		
+								<textarea id="txtarea" name="txtarea" placeholder="Discussion Description" ></textarea><br>	    		
 						  	</div>
 						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
 						 		Submit
@@ -61,7 +61,7 @@
 		   	<div class="col-sm-6">
 	    		<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Course Updates</h3>
+			    		<h3 class="panel-title">Discussion Topics</h3>
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
