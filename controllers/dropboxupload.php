@@ -2,7 +2,7 @@
 
 include ("../controllers/db.php");
 
-if(isset($_POST["btn-upload"])) {
+if(isset($_POST["submit"])) {
     
     
     $file_name = $_FILES["myFile"]["name"];

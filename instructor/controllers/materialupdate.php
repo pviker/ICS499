@@ -3,7 +3,7 @@
 
 include ("../controllers/db.php");
 
-if(isset($_POST["btn-upload"])) {
+if(isset($_POST["submit"])) {
     
     $courses_id = $_POST["courseID"];
     $file_name = $_FILES["myFile"]["name"];
