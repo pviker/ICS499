@@ -96,7 +96,7 @@
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/content/adddiscussionpost.php">Add Discussion Post</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Add Assignments</a></li>
 				            <li role="separator" class="divider"></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/dropbox.php">View Students</a></li>
+				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewcoursestudents.php">View Student Classlist</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/dropbox.php">View Dropbox</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/grades.php">Update Grades</a></li>
 		          		</ul>
