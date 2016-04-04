@@ -40,7 +40,7 @@
 			    		<h3 class="panel-title">Assignment Dropbox <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
 			  		</div>
 				  	<div class="panel-body">
-						<form role="form" action="<?php echo $rootDir ?>/instructor/controllers/dropboxupload.php" method="post" enctype="multipart/form-data">
+						<form role="form" action="<?php echo $rootDir ?>/controllers/dropboxupload.php" method="post" enctype="multipart/form-data">
 						
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
