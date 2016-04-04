@@ -5,10 +5,10 @@ include ("../controllers/db.php");
 
 if(isset($_POST["btn-upload"])) {
     
-    
+    $courses_id = $_POST["courseID"];
     $file_name = $_FILES["myFile"]["name"];
-    $file_size = $_FILES["myFile"]["size"];
     $file_type = $_FILES["myFile"]["type"];
+    $file_size = $_FILES["myFile"]["size"];
     $file_temp = $_FILES["myFile"]["tmp_name"];
     $date = date("m/d/Y");
     $title = $_POST["title"];
@@ -20,8 +20,9 @@ if(isset($_POST["btn-upload"])) {
     
     if($file_size > 0) {
     
-    $insert_query = "insert into course_content (file_name, file_type, file_size, file_content) values
-    ('" . $file_name . "','" . $file_type . "','" . $file_size . "','" . $file_content . "')";
+    $insert_query = "insert into course_content (courses_id, file_name, file_type, file_size, file_content, date, title) values
+    ('" . $courses_id . "','" . $file_name . "','" . $file_type . "','" . $file_size . "','" . $file_content . "','" . $date . 
+    "','" . $title . "')";
     
     mysqli_query($conn, $insert_query);
     
