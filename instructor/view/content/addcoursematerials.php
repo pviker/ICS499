@@ -22,15 +22,15 @@
 		<?php if(isset($_SESSION['msg'])){?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Success!</strong> Class update posted.
+				<strong>Success!</strong> <?php echo $_SESSION['msg']; ?>
 			</div>
 		<?php } unset($_SESSION['msg']);?>
-		<?php if(isset($_SESSION['errormsg2'])){?>
+		<?php if(isset($_SESSION['errormsg3'])){?>
 			<div class="alert alert-danger alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Oh Snap!</strong> Your update was not posted, please try again.
+				<strong>Oh Snap!</strong> <?php echo $_SESSION['errormsg3']; ?>
 			</div>
-		<?php } unset($_SESSION['errormsg2']);?>
+		<?php } unset($_SESSION['errormsg3']);?>
 		
 		<!-- FORM START -->
 		<div class="row">

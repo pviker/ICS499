@@ -14,8 +14,19 @@
 
 	include '../../../includes/header.php';
 	include '../../includes/nav.php';
+	
 
 ?>
+
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script>
+		$(function() {
+			$( "#datepicker" ).datepicker();
+		});
+	</script>
 
 	<div class="container-fluid">
 	
@@ -37,19 +48,27 @@
 	    	<div class="col-sm-6 col-sm-offset-3">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Add course materials for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
+			    		<h3 class="panel-title">Add assignments for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
 			  		</div>
 				  	<div class="panel-body">
 						<form role="form" action="<?php echo $rootDir ?>/instructor/controllers/materialupdate.php" method="post" enctype="multipart/form-data">
 						
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
 							<div class="form-group">
-								<label for="title">Course materials title</label>
-							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="ie. syllabus">
+								<label for="title">Title</label>
+							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="ie. Reading Assignment 1">
 						  	</div>
 						  	<div class="form-group">
-						  		<label for="fileinput">File input</label>
-						  		<input type="text" class="form-control <?php echo $status; ?>" 
+						  		<label for="description">Description</label>
+						  		<input type="text" class="form-control <?php echo $status; ?>" id="description" name="description" placeholder="Read chapters 1-n">
+						  	</div>
+						  	<div class="form-group">
+						  		<label for="duedate">Due date</label>
+						  		<input type="text" class="form-control <?php echo $status; ?>" id="datepicker" name="datepicker">
+						  	</div>
+						  	<div class="form-group">
+						  		<label for="description">Max points</label>
+						  		<input type="text" class="form-control <?php echo $status; ?>" id="points" name="points" placeholder="ie. 150">
 						  	</div>
 						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black; " >
 						 		Upload

@@ -1,6 +1,7 @@
 
 <?
 
+if (!isset($_SESSION)) session_start();
 include ("../../controllers/db.php");
 
 if(isset($_POST["submit"])) {
@@ -20,21 +21,21 @@ if(isset($_POST["submit"])) {
     
     if($file_size > 0) {
     
-    $insert_query = "insert into course_content (courses_id, file_name, file_type, file_size, file_content, date, title) values
-    ('" . $courses_id . "','" . $file_name . "','" . $file_type . "','" . $file_size . "','" . $file_content . "','" . $date . 
-    "','" . $title . "')";
-    
-    mysqli_query($conn, $insert_query);
-    
-    $_SESSION["msg"] = "File uploaded successfully.";
-    
-    header("Location: ../view/content/addcoursematerials.php");
-    
-    } else {
+	    $insert_query = "insert into course_content (courses_id, file_name, file_type, file_size, file_content, date, title) values
+	    ('" . $courses_id . "','" . $file_name . "','" . $file_type . "','" . $file_size . "','" . $file_content . "','" . $date . 
+	    "','" . $title . "')";
+	    
+	    if(mysqli_query($conn, $insert_query)){
+		    $_SESSION['msg'] = "File uploaded successfully.";
+		   // echo "GOOD";
+		    header("Location: ../view/content/addcoursematerials.php");
+	    } else {
+	        $_SESSION['errormsg3'] = "Error. File not uploaded.";
+	       // echo "BAD";
+	        header("Location: ../view/content/addcoursematerials.php");
+	    }
         
-        $_SESSION["errormsg"] = "Error. File not uploaded.";
-    }
-        
+	}
 }
 
 ?>
