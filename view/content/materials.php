@@ -2,6 +2,12 @@
 
 	include '../../includes/header.php';
 	include '../../includes/nav.php';
+    
+    $content_query = "select course_content_id, title from course_content where courses_id = '" . $_SESSION["selectedCourse"] . "'";
+
+$content_results = mysqli_query($conn, $content_query);
+
+
 
 ?>
 
@@ -15,9 +21,17 @@
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
-							<a href="<?php echo $rootDir ?>/view/course.php?courseID=1" class="list-group-item">Week 1</a>
+							<!-- <a href="<?php echo $rootDir ?>/view/course.php?courseID=1" class="list-group-item">Week 1</a>
 							<a href="<?php echo $rootDir ?>/view/course.php?courseID=2" class="list-group-item">Week 2</a>
-							<a href="<?php echo $rootDir ?>/view/course.php?courseID=3" class="list-group-item">Week 3</a>
+							<a href="<?php echo $rootDir ?>/view/course.php?courseID=3" class="list-group-item">Week 3</a> -->
+							<?php while($content_row = mysqli_fetch_assoc($content_results)) {
+    
+    echo "<a href = '../../controllers/coursecontentdownload.php?course_content_id=" . $content_row["course_content_id"] . "'>" . 
+    $content_row["title"] . "</a><br>"; 
+    
+    
+} ?>
+							
 						</div>
 				  	</div>
 				</div>
