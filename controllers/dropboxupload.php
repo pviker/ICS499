@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
     $file_temp = $_FILES["myFile"]["tmp_name"];
     $date = date("m/d/Y");
     $student_id = $_SESSION["studentid"];
-    $assignments_id = $_SESSION["assignmentsid"];
+    $assignments_id = $_POST["assignmentsid"];
     $title = $_POST["title"];
     
     $open_file = fopen($file_temp, "r");

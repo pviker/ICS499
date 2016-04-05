@@ -1,6 +1,6 @@
 <?
 
-include ("../controllers/db.php");
+include ("../../controllers/db.php");
 
 if(isset($_POST["btn-download"])) {
     
