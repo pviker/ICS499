@@ -2,9 +2,11 @@
 
 include ("db.php");
 
-if(isset($_GET["btn-download"])) {
+if(isset($_GET["course_content_id"])) {
     
-    $query = "select * from dropbox where dropbox_id = '2'";
+    $course_content_id = $_GET['course_content_id'];
+    
+    $query = "select * from course_content where course_content_id ='" . $course_content_id . "'";
     
     $result = mysqli_query($conn, $query);
     
