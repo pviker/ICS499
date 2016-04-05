@@ -26,16 +26,24 @@ if(isset($_POST["submit"])) {
 	    "','" . $title . "')";
 	    
 	    if(mysqli_query($conn, $insert_query)){
+	        
 		    $_SESSION['msg'] = "File uploaded successfully.";
-		   // echo "GOOD";
+		 
 		    header("Location: ../view/content/addcoursematerials.php");
+		    
 	    } else {
+	        
 	        $_SESSION['errormsg3'] = "Error. File not uploaded.";
-	       // echo "BAD";
+	      
 	        header("Location: ../view/content/addcoursematerials.php");
 	    }
         
-	}
+	} else {
+            
+        $_SESSION['errormsg3'] = "Error. File not selected.";
+          
+        header("Location: ../view/content/addcoursematerials.php");
+    }
 }
 
 ?>
