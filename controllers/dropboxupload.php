@@ -29,20 +29,20 @@ if(isset($_POST["submit"])) {
             
             $_SESSION['msg'] = "File uploaded successfully.";
          
-            header("Location: ../view/content/addcoursematerials.php");
+            header("Location: ../view/content/assignments.php");
             
         } else {
             
             $_SESSION['errormsg3'] = "Error. File not uploaded.";
           
-            header("Location: ../view/content/addcoursematerials.php");
+            header("Location: ../view/content/assignments.php");
         }
         
     } else {
             
         $_SESSION['errormsg3'] = "Error. File not selected.";
           
-        header("Location: ../view/content/addcoursematerials.php");
+        header("Location: ../view/content/assignments.php");
     }
         
 }
