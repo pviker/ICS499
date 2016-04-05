@@ -22,6 +22,7 @@
 					    			<th>Description</th>
 					    			<th>Due Date</th>
 					    			<th>Points</th>	
+					    			<th>Submit</th>
 					    		</tr>
 					    			<?php include '../../includes/getcourseassignments.php'; ?>
 				    		</thead>

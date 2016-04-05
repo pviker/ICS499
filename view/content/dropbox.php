@@ -43,6 +43,7 @@
 						<form role="form" action="<?php echo $rootDir ?>/controllers/dropboxupload.php" method="post" enctype="multipart/form-data">
 						
 							<input type="hidden" id="courseID" name="courseID" value="<?php echo $_SESSION['selectedCourse']; ?>">
+							<input type="hidden" id="assignmentsid" name="assignmentsid" value="<?php echo $_GET['assignmentID']; ?>">
 							<div class="form-group">
 								<label for="title">Course materials title</label>
 							    <input type="text" class="form-control <?php echo $status; ?>" id="title" name="title" placeholder="ie. syllabus">

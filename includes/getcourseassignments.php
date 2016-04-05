@@ -23,7 +23,7 @@
 		//header("Location: ../index.php");
 	}
 
-	$getCourseAssignments = "SELECT name, description, due_date, max_points 
+	$getCourseAssignments = "SELECT assignments_id, name, description, due_date, max_points, dropbox_flag 
 								FROM assignments
     							WHERE courses_id=".$course;
 	
@@ -37,12 +37,18 @@
         exit;
 	} else {
 		while($row = mysqli_fetch_assoc($assignmentResults)) {
+			if($row['dropbox_flag'] == 0){
+				$dropbox = "";
+			} else {
+				$dropbox = "<a href='../content/dropbox.php?assignmentID=".$row['assignments_id']."'>Submit</a>";
+			}
 			echo "<tr>".
 				 "<td>".$row['name']."</td>".
 				 "<td>".$row['description']."</td>".
 				 "<td>".$row['due_date']."</td>".
 				 "<td>".$row['max_points']."</td>".
-				 "</tr>";
+				 "<td>".$dropbox."</td>
+				 </tr>";
  		}
 	  }
 
