@@ -2,7 +2,7 @@
 
 include ("../../controllers/db.php");
 
-if(isset($_POST["btn-download"])) {
+if(isset($_GET["btn-download"])) {
     
     $query = "select * from dropbox where dropbox_id = '2'";
     
