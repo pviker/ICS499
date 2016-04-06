@@ -1,7 +1,7 @@
 <?php
 
     include '../../includes/header.php';
-    include '../../includes/nav.php';
+    include '../includes/nav.php';
     include '../includes/getassignments.php';
 
 ?>
