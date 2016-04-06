@@ -30,10 +30,8 @@
 							<?php 
 								
 								while($content_row = mysqli_fetch_assoc($content_results)) {
-    
-							    echo "<a href = '../../controllers/coursecontentdownload.php?course_content_id=" . $content_row["course_content_id"] . "'
-    									 class='list-group-item'>" . $content_row["title"] . " <small>(Filename: " . $content_row['file_name'] . ")</small></a>"; 
-							    
+								    echo "<a href = '../../controllers/coursecontentdownload.php?course_content_id=" . $content_row["course_content_id"] . "'
+	    									 class='list-group-item'>" . $content_row["title"] . " <small>(Filename: " . $content_row['file_name'] . ")</small></a>";
 								} 
 							?>
 							
