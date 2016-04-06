@@ -22,7 +22,6 @@ header("Content-type: $file_type");
 header("Content-Disposition: attachment; filename=$file_name");
 echo $file_content;
 
-// header("Location: ../view/content/materials.php");
     
 }
 
