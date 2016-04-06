@@ -4,10 +4,6 @@
 	include '../../includes/nav.php';
     include '../../includes/materialslink.php';
 
-//     $content_query = "select course_content_id, file_name, title from course_content where courses_id = '" . $_SESSION["selectedCourse"] . "'";
-// 	$content_results = mysqli_query($conn, $content_query);
-
-
 ?>
 
 	<div class="container-fluid">
