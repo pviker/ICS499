@@ -3,15 +3,11 @@
 	include '../../includes/header.php';
 	include '../../includes/nav.php';
     include '../../includes/materialslink.php';
-    
-<<<<<<< HEAD
-=======
-    $content_query = "select course_content_id, file_name, title from course_content where courses_id = '" . $_SESSION["selectedCourse"] . "'";
-	$content_results = mysqli_query($conn, $content_query);
+
+//     $content_query = "select course_content_id, file_name, title from course_content where courses_id = '" . $_SESSION["selectedCourse"] . "'";
+// 	$content_results = mysqli_query($conn, $content_query);
 
 
-
->>>>>>> origin/master
 ?>
 
 	<div class="container-fluid">
