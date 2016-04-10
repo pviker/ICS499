@@ -18,30 +18,7 @@
 
                     </div>
                     <div class="panel-body">
-<!--                         <div class="list-group"> -->
-                            <!-- <a href="<?php echo $rootDir ?>/view/course.php?courseID=1" class="list-group-item">Week 1</a>
-                            <a href="<?php echo $rootDir ?>/view/course.php?courseID=2" class="list-group-item">Week 2</a>
-                            <a href="<?php echo $rootDir ?>/view/course.php?courseID=3" class="list-group-item">Week 3</a> -->
-                            <?php 
-
-                                
-                                while($assignments_row = mysqli_fetch_assoc($assignments_results)) {
-                                    echo "<a href = 'viewstudentsubmissions.php?assignments_id=" . $assignments_row["assignments_id"] . "'
-                                             class='list-group-item'>" . $assignments_row["name"] . "</a>";
-                                } 
-
-                           	 
-                            	include '../includes/getdropboxassignments.php';
-                            	
-//                                 while($assignments_row = mysqli_fetch_assoc($assignments_results)) {
-									
-//                                     echo "<a href = '../controllers/dropboxdownload.php?assignments_id=" . $assignments_row["assignments_id"] . "'
-//                                              class='list-group-item'>" . $assignments_row["name"] . "</a>";
-//                                 } 
-
-                            ?>
-                            
-<!--                         </div> -->
+	                    <?php include '../includes/getdropboxassignments.php'; ?>
                     </div>
                 </div>
             </div>
