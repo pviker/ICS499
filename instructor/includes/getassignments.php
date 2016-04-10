@@ -4,7 +4,8 @@ if (!isset($_SESSION)) session_start();
 
 include '../../controllers/db.php';
 
-$assignments_query = "select assignments.assignments_id, name, file_content, first_name, last_name, dropbox.title, dropbox.date 
+$assignments_query = "select assignments.assignments_id, name, file_content, first_name, last_name, dropbox.title, dropbox.date, dropbox.student_id,
+                      dropbox.dropbox_id
 							from assignments, dropbox, student 
 							where assignments.assignments_id=dropbox.assignments_id 
 							and dropbox.student_id=student.student_id 

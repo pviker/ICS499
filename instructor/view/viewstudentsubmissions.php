@@ -49,7 +49,8 @@
 									 "<td>".$row['first_name']. " " . $row['last_name'] . "</td>".
 									 "<td>".$row['title']."</td>".
 									 "<td>".$row['date']."</td>".
-									 "<td><a href = '../controllers/dropboxdownload.php?assignments_id=" . $row["assignments_id"] . "'>Download</a></td>
+									 "<td><a href = '../controllers/dropboxdownload.php?assignments_id=" . $row["assignments_id"] . "&student_id=" 
+									 . $row['student_id'] . "&dropbox_id=" . $row['dropbox_id'] . "'>Download</a></td>
 								 </tr>";
 						
 // 				            echo "<a href = '../controllers/dropboxdownload.php?assignments_id=" . $row["assignments_id"] . "'

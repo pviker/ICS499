@@ -14,12 +14,12 @@ if(isset($_POST["submit"])) {
     $assignments_id = $_POST["assignmentsid"];
     $title = $_POST["title"];
     
+    if($file_size > 0 && $file_size < 2097152) {
+    
     $open_file = fopen($file_temp, "r");
     $file_content = fread($open_file, $file_size);
     $file_content = addslashes($file_content);
     fclose($open_file);
-    
-    if($file_size > 0) {
     
     $insert_query = "insert into dropbox (assignments_id, student_id, title, file_name, file_type, file_size, file_content, date) values
     ('" . $assignments_id . "','" . $student_id . "','" . $title . "','". $file_name . "','" . $file_type . "','" . $file_size . "','" 
@@ -40,7 +40,7 @@ if(isset($_POST["submit"])) {
         
     } else {
             
-        $_SESSION['errormsg3'] = "Error. File not selected.";
+        $_SESSION['errormsg3'] = "Error. File too large or not selected.";
           
         header("Location: ../view/content/assignments.php");
     }
