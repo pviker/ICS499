@@ -12,7 +12,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-primary" style="border-color: #696053;">
                     <div class="panel-heading panel-head">
-                        <h3 class="panel-title">Assignments</h3>
+                        <h3 class="panel-title">Student Submissions</h3>
                     </div>
                     <div class="panel-body">
                         <div class="list-group">
@@ -22,7 +22,7 @@
                             <?php 
                                 
                                 while($assignments_row = mysqli_fetch_assoc($assignments_results)) {
-                                    echo "<a href = 'viewstudentsubmissions.php?assignments_id=" . $assignments_row["assignments_id"] . "'
+                                    echo "<a href = '../controllers/dropboxdownload.php?assignments_id=" . $assignments_row["assignments_id"] . "'
                                              class='list-group-item'>" . $assignments_row["name"] . "</a>";
                                 } 
                             ?>
