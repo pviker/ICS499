@@ -41,7 +41,7 @@
 					    			<th>Submission Download</th>
 					    		</tr>
 					    	</thead>	
-<<<<<<< HEAD
+
 					    		
 				<?php 
 					include '../includes/getassignments.php';
@@ -73,30 +73,7 @@
 
                             
                         </div>
-=======
-						    		
-							<?php 
-								include '../includes/getassignments.php';
-			                                
-				                if($row_count==0){
-									echo "No submissions at this time";
-								} else{
-						            while($row = mysqli_fetch_assoc($assignments_results)) {
-										echo "<tr>".
-												 "<td>".$row['first_name']. " " . $row['last_name'] . "</td>".
-												 "<td>".$row['title']."</td>".
-												 "<td>".$row['date']."</td>".
-												 "<td><a href = '../controllers/dropboxdownload.php?assignments_id=" . $row["assignments_id"] . "'>Download</a></td>
-											 </tr>";
-									
-			// 				            echo "<a href = '../controllers/dropboxdownload.php?assignments_id=" . $row["assignments_id"] . "'
-			// 				            		class='list-group-item'>" . $row["name"] . "</a>";
-						            } 
-				                }
-			                ?>
-						 
-	                    </table>
->>>>>>> origin/master
+
                     </div>
                 </div>
             </div>
