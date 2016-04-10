@@ -40,11 +40,9 @@
 		while($assignments_row = mysqli_fetch_assoc($assignmentResults)) {
 			if($assignments_row['dropbox_flag'] == 1){
 			
-				echo "<div class='list-group'>".
-						"<a href = 'viewstudentsubmissions.php?assignments_id=" . $assignments_row["assignments_id"] . "'
+				echo "<a href = 'viewstudentsubmissions.php?assignments_id=" . $assignments_row["assignments_id"] . "'
                             class='list-group-item'>" . $assignments_row["name"] . 
-						"</a>
-					  </div>";
+					 "</a>";
 			}
 		}
 	}

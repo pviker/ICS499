@@ -18,7 +18,9 @@
 
                     </div>
                     <div class="panel-body">
-	                    <?php include '../includes/getdropboxassignments.php'; ?>
+                    	<div class='list-group'>
+	                    	<?php include '../includes/getdropboxassignments.php'; ?>
+	                    </div>
                     </div>
                 </div>
             </div>
