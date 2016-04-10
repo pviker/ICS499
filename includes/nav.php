@@ -101,8 +101,7 @@
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Class Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Discussion Forum</a></li>
 				            <li role="separator" class="divider"></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Assignments</a></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/dropbox.php">Dropbox</a></li>
+				            <li><a href="<?php echo $rootDir ?>/view/content/assignments.php">Course Assignments</a></li>
 				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/grades.php">Grades</a></li>
 		          		</ul>

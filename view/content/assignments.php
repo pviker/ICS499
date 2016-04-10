@@ -6,6 +6,19 @@
 ?>
 
 	<div class="container-fluid">
+	
+		<?php if(isset($_SESSION['msg'])){?>
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Success!</strong> Class update posted.
+			</div>
+		<?php } unset($_SESSION['msg']);?>
+		<?php if(isset($_SESSION['errormsg3'])){?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Oh Snap!</strong> Your update was not posted, please try again.
+			</div>
+		<?php } unset($_SESSION['errormsg3']);?>
 		
 		<div class="row">
 	    	<div class="col-sm-12">
