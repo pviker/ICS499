@@ -1,5 +1,15 @@
 <?php
 
+    if(isset($_GET['assignments_id'])) {
+        
+        $assignments_id = $_GET['assignments_id'];
+        
+    } else {
+        
+        header("Location: landing.php");
+        
+    }
+    
     include '../../includes/header.php';
     include '../includes/nav.php';
     include '../includes/getassignments.php';
