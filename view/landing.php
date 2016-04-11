@@ -37,7 +37,6 @@
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
 			    		<h3 class="panel-title">Assignments due soon...</h3>
-			    		
 			  		</div>
 				  	<div class="panel-body">
 					  	<div class="table-responsive">
@@ -50,9 +49,9 @@
 						    		</tr>
 						    	</thead>
 							    <?php
-						    	while($row = mysqli_fetch_assoc($result)) {
-		                            echo "<tr><td>" . $row["course_num"] . "</td><td>" . $row["name"] . "</td><td>" . $row["due_date"] . "</td></tr>";
-						    	}
+							    	while($row = mysqli_fetch_assoc($result)) {
+			                            echo "<tr><td>" . $row["course_num"] . "</td><td>" . $row["name"] . "</td><td>" . $row["due_date"] . "</td></tr>";
+							    	}
 						    	?>
 							</table>
 						</div>
