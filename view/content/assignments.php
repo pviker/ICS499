@@ -28,18 +28,20 @@
 			    		
 			  		</div>
 				  	<div class="panel-body">
-				    	<table class="table">
-					    	<thead>
-					    		<tr>
-					    			<th>Assignment</th>
-					    			<th>Description</th>
-					    			<th>Due Date</th>
-					    			<th>Points</th>	
-					    			<th>Submit</th>
-					    		</tr>
-					    			<?php include '../../includes/getcourseassignments.php'; ?>
-				    		</thead>
-				    	</table>
+				    	<div class="table-responsive">
+		                    <table class="table table-striped">
+						    	<thead>
+						    		<tr>
+						    			<th>Assignment</th>
+						    			<th>Description</th>
+						    			<th>Due Date</th>
+						    			<th>Points</th>	
+						    			<th>Submit</th>
+						    		</tr>
+						    			<?php include '../../includes/getcourseassignments.php'; ?>
+					    		</thead>
+					    	</table>
+					    </div>
 				  	</div>
 				</div>
 			</div>

@@ -20,15 +20,17 @@
 			    		
 			  		</div>
 				  	<div class="panel-body">
-				    	<table class="table">
-					    	<thead>
-					    		<tr>
-					    			<th>Name</th>
-					    			<th>Email</th>
-					    		</tr>
-					    			<?php include '../../includes/getinstructorinfo.php'; ?>
-				    		</thead>
-				    	</table>
+				    	<div class="table-responsive">
+		                    <table class="table table-striped">
+						    	<thead>
+						    		<tr>
+						    			<th>Name</th>
+						    			<th>Email</th>
+						    		</tr>
+						    			<?php include '../../includes/getinstructorinfo.php'; ?>
+					    		</thead>
+					    	</table>
+					    </div>
 				  	</div>
 				</div>
 			</div>

@@ -12,28 +12,27 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title"><?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?> Student Classlist</h3>
-			    		
+			    		<h3 class="panel-title">
+			    			<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?> Student Classlist
+			    		</h3>
 			  		</div>
 				  	<div class="panel-body">
-				    	<table class="table">
-					    	<thead>
-					    		<tr>
-					    			<th>Name</th>
-					    			<th>Email</th>
-					    		</tr>
-					    			<?php include '../includes/getclasslist.php'; ?>
-				    		</thead>
-				    	</table>
+				    	<div class="table-responsive">
+		                    <table class="table table-striped">
+						    	<thead>
+						    		<tr>
+						    			<th>Name</th>
+						    			<th>Email</th>
+						    		</tr>
+						    			<?php include '../includes/getclasslist.php'; ?>
+					    		</thead>
+					    	</table>
+					    </div>
 				  	</div>
 				</div>
 			</div>
 			<div class="col-sm-3"></div>
 		</div>
-	
 	</div>
-
-	
-
 </body>
 </html>
