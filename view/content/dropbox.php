@@ -38,7 +38,7 @@
 						  	<div class="form-group">
 						  		<label for="fileinput">File input</label>
 						  		<input class="" type="file" name="myFile" id="fileinput"/>
-						  		<p class="help-block">Upload your document (valid filetypes: .pdf, .jpg, .doc, .txt)</p>
+						  		<p class="help-block">Upload your document (valid filetypes: .pdf, .jpg, .doc, .txt max file size 2MB)</p>
 						  	</div>
 						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black; " >
 						 		Upload
