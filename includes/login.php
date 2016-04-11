@@ -38,16 +38,11 @@
 				<h1 style="margin-top: 0px;"><small>Sign In</small></h1>
 				<form role="form" action="<?php echo $rootDir ?>/controllers/authorizelogin.php" method="post">
 					<div class="form-group">
-<!-- 						    <label for="username">Username:</label> -->
 					    <input type="text" class="form-control <?php echo $status; ?>" id="username" name="username" placeholder="Username">
 				  	</div>
 					<div class="form-group">
-<!-- 						    <label for="pwd">Password:</label> -->
 					    <input type="password" class="form-control <?php echo $status; ?>" id="password" name="password" placeholder="Password">
 				  	</div>
-			<!-- 	  	<div class="checkbox"> -->
-			<!-- 	    	<label><input type="checkbox" id="saveUsername">Remember me</label> -->
-			<!-- 	  	</div> -->
 				 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
 				 		Submit
 				 	</button>
