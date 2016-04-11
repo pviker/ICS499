@@ -36,21 +36,26 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Assignments due soon?</h3>
+			    		<h3 class="panel-title">Assignments due soon...</h3>
 			    		
 			  		</div>
 				  	<div class="panel-body">
-				    	<p><?php
-				    	
-				    	while($row = mysqli_fetch_assoc($result)) {
-				    	    
-                            echo $row["course_num"] . " " . $row["name"] . " " . $row["due_date"] . "<br>";
-                            
-				    	}
-				    	
-				    	
-				    	
-				    	?></p>
+					  	<div class="table-responsive">
+		                    <table class="table table-striped">
+						    	<thead>
+						    		<tr>
+						    			<th>Course</th>
+						    			<th>Description</th>
+						    			<th>Due Date</th>
+						    		</tr>
+						    	</thead>
+							    <?php
+						    	while($row = mysqli_fetch_assoc($result)) {
+		                            echo "<tr><td>" . $row["course_num"] . "</td><td>" . $row["name"] . "</td><td>" . $row["due_date"] . "</td></tr>";
+						    	}
+						    	?>
+							</table>
+						</div>
 				  	</div>
 				</div>
 			</div>
