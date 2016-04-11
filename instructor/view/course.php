@@ -20,18 +20,41 @@
 	<div class="container-fluid">
 		
 		<div class="row">
-	    	<div class="col-sm-6 col-sm-offset-3">
+	    	<div class="col-sm-10 col-sm-offset-1">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
 			    		<h3 class="panel-title">What would you like to do?</h3>
 			  		</div>
 				  	<div class="panel-body">
-				    	<div class="list-group">
-				    		<ul class="nav nav-pills">
-							  <li role="presentation" class="active"><a href="#">Home</a></li>
-							  <li role="presentation"><a href="#">Profile</a></li>
-							  <li role="presentation"><a href="#">Messages</a></li>
-							</ul>
+				        <div class="list-group">
+							<a href="<?php echo $rootDir ?>/instructor/view/content/addcourseupdate.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Update Course</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/instructor/view/content/addcoursematerials.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Add Course Materials</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/instructor/view/content/adddiscussionpost.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Create Discussion Post</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/instructor/view/content/addassignment.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Add Assignments</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/instructor/view/viewcoursestudents.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Student Classlist</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/instructor/view/viewdropbox.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Dropbox</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
+							<a href="<?php echo $rootDir ?>/view/content/grades.php" class="list-group-item">
+								<h4 class="list-group-item-heading">Update Grades</h4>
+								<p class="list-group-item-text">...</p>
+							</a>
 						</div>
 				  	</div>
 				</div>	
