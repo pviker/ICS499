@@ -24,7 +24,7 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Select Course</h3>
+			    		<h3 class="panel-title">Select a course you would like to manage</h3>
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
@@ -36,7 +36,7 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Assignments due soon...</h3>
+			    		<h3 class="panel-title">Assignments due soon:</h3>
 			  		</div>
 				  	<div class="panel-body">
 					  	<div class="table-responsive">
@@ -61,8 +61,6 @@
 		</div>
 	
 	</div>
-
-	
 
 </body>
 </html>

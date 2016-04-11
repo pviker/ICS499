@@ -22,7 +22,6 @@
 	    									 class='list-group-item'>" . $content_row["title"] . " <small>(Filename: " . $content_row['file_name'] . ")</small></a>";
 								} 
 							?>
-							
 						</div>
 				  	</div>
 				</div>
@@ -31,7 +30,6 @@
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
 			    		<h3 class="panel-title">Assignments due for course: <?php echo $_SESSION['selectedCourse']; ?></h3>
-			    		
 			  		</div>
 				  	<div class="panel-body">
 				    	<p>*DB query for past 30 days for currently selected course</p>
