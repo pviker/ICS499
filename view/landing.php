@@ -14,6 +14,7 @@
 
 	include '../includes/header.php';
 	include '../includes/nav.php';
+    include '../includes/getassignmentduedates.php';
 
 ?>
 
@@ -39,7 +40,17 @@
 			    		
 			  		</div>
 				  	<div class="panel-body">
-				    	<p>*DB query for past 30 days and sort by what's due soonest</p>
+				    	<p><?php
+				    	
+				    	while($row = mysqli_fetch_assoc($result)) {
+				    	    
+                            echo $row["course_num"] . " " . $row["name"] . " " . $row["due_date"] . "<br>";
+                            
+				    	}
+				    	
+				    	
+				    	
+				    	?></p>
 				  	</div>
 				</div>
 			</div>
