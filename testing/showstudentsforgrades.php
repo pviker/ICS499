@@ -28,11 +28,25 @@ $studentQuery = "select first_name, last_name, file_size from dropbox, student
                  order by last_name asc";
                  
 $studentResult = mysqli_query($conn, $studentQuery); 
+
+?>
+
+<form name="updateGrades" action="action_page.php" method="post">
+   Name:<br>
+  <?php   
+  while($studentRow = mysqli_fetch_assoc($studentResult)) {
+      
+      echo $studentRow["first_name"] . " " . $studentRow["last_name"] . 
+      "<input type=\"text\" name=\"points\" size=\"5\">/" . $maxPoints . "<br>";   }    ?>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<?php
     
 while($studentRow = mysqli_fetch_assoc($studentResult)) {
     
     echo $maxPoints . " " . $studentRow["first_name"] . " " . $studentRow["last_name"] . " " . $studentRow["file_size"] . "<br>";
-    
     
 }
     
