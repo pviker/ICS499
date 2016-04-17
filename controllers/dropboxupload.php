@@ -15,17 +15,41 @@ if(isset($_POST["submit"])) {
     $title = $_POST["title"];
     
     if($file_size > 0 && $file_size < 2097152) {
-    
+  
 	    $open_file = fopen($file_temp, "r");
 	    $file_content = fread($open_file, $file_size);
 	    $file_content = addslashes($file_content);
 	    fclose($open_file);
 	    
-	    $insert_query = "insert into dropbox (assignments_id, student_id, title, file_name, file_type, file_size, file_content, date) values
-	    ('" . $assignments_id . "','" . $student_id . "','" . $title . "','". $file_name . "','" . $file_type . "','" . $file_size . "','" 
-	    . $file_content . "','" . $date . "')";
+	    $query = "select count(student_id) from dropbox where assignments_id=" . $assignments_id . "and student_id=" . $student_id;
 	    
-	   if(mysqli_query($conn, $insert_query)){
+	    $result = mysqli_query($conn, $query);
+	    
+	    if($result){
+	    	$count = mysqli_fetch_row($result);
+	    	mysql_free_result($result);
+	    	
+	    	if($count > 0){
+	    		$query = "select dropbox_id where assignments_id=" . $assignments_id . "and student_id=" . $student_id;
+	    		$result = mysqli_query($conn, $query);
+	    		
+	    		if($result){
+	    			$dropbox_id = mysqli_fetch_row($result);
+	    		}
+	    		
+	    		$query = "UPDATE dropbox
+	    					SET title='" . $title . "', file_name='" . $file_name . "', file_type='" . $file_type . "', file_size='" . $file_size . "',
+	    						file_content='" . $file_content . "', date='" . $date . "'
+	    					WHERE dropbox_id=" .$dropbox_id;
+	    		
+	    	} else {
+			    $query = "insert into dropbox (assignments_id, student_id, title, file_name, file_type, file_size, file_content, date) 
+			    			values ('" . $assignments_id . "','" . $student_id . "','" . $title . "','". $file_name . "','" 
+			    					   . $file_type . "','" . $file_size . "','" . $file_content . "','" . $date . "')";
+		  	}
+	    }
+	    
+	   if(mysqli_query($conn, $query)){
 	            
             $_SESSION['msg'] = "File uploaded successfully.";
          
