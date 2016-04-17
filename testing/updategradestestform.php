@@ -11,7 +11,7 @@
     
     $query = "select name, assignments_id from assignments, courses
               where assignments.courses_id=courses.courses_id
-              and dropbox_flag='1'
+              
               and courses.courses_id='1'";
               
               // . $_SESSION["selectedCourse"];

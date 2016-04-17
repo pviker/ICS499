@@ -22,12 +22,13 @@ mysqli_free_result($pointsResult);
 
 // echo $maxPoints;
 
-$studentQuery = "select first_name, last_name, file_size from dropbox, student
+$studentQuery = "select first_name, last_name, from student
                  where dropbox.assignments_id='" . $assignments_id . "'
                  and dropbox.student_id=student.student_id
                  order by last_name asc";
                  
 $studentResult = mysqli_query($conn, $studentQuery); 
+
 
 ?>
 
@@ -36,8 +37,18 @@ $studentResult = mysqli_query($conn, $studentQuery);
   <?php   
   while($studentRow = mysqli_fetch_assoc($studentResult)) {
       
+      if($studentRow["file_size"] == 0) {
+          
+          $flag = "No assignment submitted.";
+          
+      } else {
+          
+          $flag = "";
+          
+      }
+      
       echo $studentRow["first_name"] . " " . $studentRow["last_name"] . 
-      "<input type=\"text\" name=\"points\" size=\"5\">/" . $maxPoints . "<br>";   }    ?>
+      "<input type=\"text\" name=\"points\" size=\"5\">/" . $maxPoints . " " . $flag . "<br>";   }    ?>
   
   <input type="submit" value="Submit">
 </form>
