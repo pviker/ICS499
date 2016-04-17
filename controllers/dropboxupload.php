@@ -35,15 +35,12 @@ if(isset($_POST["submit"])) {
 	    		
 	    		$query = "select dropbox_id from dropbox where assignments_id=" . $assignments_id . " and student_id=" . $student_id;
 	    		
-//	    		echo $query;
 	    		$result = mysqli_query($conn, $query);
 	    		
 	    		if($result){
 	    			$row = mysqli_fetch_assoc($result);
 	    			$dropbox_id = $row['dropbox_id'];
 	    		}
-	    		
-// 	    		echo "<br>DROPBOXID= " . $dropbox_id . "<br>";
 	    		
 	    		$query = "UPDATE dropbox
 	    					SET title='" . $title . "', file_name='" . $file_name . "', file_type='" . $file_type . "', file_size='" . $file_size . "',
