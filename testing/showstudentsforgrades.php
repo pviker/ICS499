@@ -22,10 +22,9 @@ mysqli_free_result($pointsResult);
 
 // echo $maxPoints;
 
-$studentQuery = "select distinct dropbox_id, first_name, last_name, file_size from dropbox, student
+$studentQuery = "select first_name, last_name, file_size from dropbox, student
                  where dropbox.assignments_id='" . $assignments_id . "'
                  and dropbox.student_id=student.student_id
-                 group by LOWER(last_name)
                  order by last_name asc";
                  
 $studentResult = mysqli_query($conn, $studentQuery); 
@@ -37,7 +36,7 @@ $studentResult = mysqli_query($conn, $studentQuery);
   <?php   
   while($studentRow = mysqli_fetch_assoc($studentResult)) {
       
-      echo "id: " . $studentRow['dropbox_id'] . "--" . $studentRow["first_name"] . " " . $studentRow["last_name"] . 
+      echo $studentRow["first_name"] . " " . $studentRow["last_name"] . 
       "<input type=\"text\" name=\"points\" size=\"5\">/" . $maxPoints . "<br>";   }    ?>
   
   <input type="submit" value="Submit">
