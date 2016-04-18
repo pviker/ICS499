@@ -8,10 +8,5 @@ if (!isset($_SESSION)) session_start();
               
     $result = mysqli_query($conn, $query); 
     
-    while($row = mysqli_fetch_assoc($result)) {
-        
-        echo "<a href='showstudentsforgrades.php?assignments_id=" . $row["assignments_id"] . "'>" . $row["name"] . "</a><br>";
-    }
-    
-    ?>
+?>
     

@@ -98,7 +98,7 @@
 				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewcoursestudents.php">View Student Classlist</a></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewdropbox.php">View Dropbox</a></li>
-				            <li><a href="<?php echo $rootDir ?>/view/content/grades.php">Update Grades</a></li>
+				            <li><a href="<?php echo $rootDir ?>/instructor/view/grades.php">Update Grades</a></li>
 		          		</ul>
 		        	</li>
 	        	<?php } ?>

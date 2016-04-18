@@ -1,7 +1,9 @@
 <?php
 
 	include '../../includes/header.php';
-	include '../../includes/nav.php';
+	include '../includes/nav.php';
+    include '../../controllers/db.php';
+    include '../includes/getassignmentsupdategrades.php';
 
 ?>
 
@@ -15,7 +17,13 @@
 			    		<h3 class="panel-title">Grades</h3>
 			  		</div>
 				  	<div class="panel-body">
-				    	
+				  	<?php
+				  	
+				  	while($row = mysqli_fetch_assoc($result)) {
+        
+                    echo "<a href='updategradesview.php?assignments_id=" . $row["assignments_id"] . "'>" . $row["name"] . "</a><br>";
+                    
+                    } ?>	
 				  	</div>
 				</div>
 	    	</div>

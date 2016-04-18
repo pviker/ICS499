@@ -51,7 +51,7 @@
 								<h4 class="list-group-item-heading">Dropbox</h4>
 								<p class="list-group-item-text">View student uploaded assignments</p>
 							</a>
-							<a href="<?php echo $rootDir ?>/view/content/grades.php" class="list-group-item">
+							<a href="<?php echo $rootDir ?>/instructor/view/grades.php" class="list-group-item">
 								<h4 class="list-group-item-heading">Update Grades</h4>
 								<p class="list-group-item-text">Update student grades for selected course.</p>
 							</a>
