@@ -33,19 +33,19 @@
 		<?php if(isset($_SESSION['msg'])){?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Success!</strong> Class update posted.
+				<strong>Success!</strong> New assignment added for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?>.
 			</div>
 		<?php } unset($_SESSION['msg']);?>
 		<?php if(isset($_SESSION['errormsg4'])){?>
 			<div class="alert alert-danger alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Oh Snap!</strong> Your update was not posted, please try again.
+				<strong>Oh Snap!</strong> Your assignment was not added, please try again.
 			</div>
 		<?php } unset($_SESSION['errormsg4']);?>
 		
 		<!-- FORM START -->
 		<div class="row">
-	    	<div class="col-sm-6 col-sm-offset-3">
+	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
 			    		<h3 class="panel-title">Add assignments for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
@@ -84,6 +84,31 @@
 				</div>	
 	    	</div>
 	    	<!-- FORM END -->
+	    	<div class="col-sm-6">
+	    		<div class="col-sm-12">
+    			<div class="panel panel-primary" style="border-color: #696053;">
+			  		<div class="panel-heading panel-head">
+			    		<h3 class="panel-title">Current Assignments for <?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?></h3>
+			    		
+			  		</div>
+				  	<div class="panel-body">
+				    	<div class="table-responsive">
+		                    <table class="table table-striped">
+						    	<thead>
+						    		<tr>
+						    			<th>Assignment</th>
+						    			<th>Description</th>
+						    			<th>Due Date</th>
+						    			<th>Points</th>	
+						    		</tr>
+						    			<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'instructor/includes/getcourseassignments.php'; ?>
+					    		</thead>
+					    	</table>
+					    </div>
+				  	</div>
+				</div>
+			</div>
+	    	</div>
 	    	
 		   	
 		</div>
