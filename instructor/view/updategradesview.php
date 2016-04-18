@@ -17,13 +17,13 @@
                         <h3 class="panel-title">Grades</h3>
                     </div>
                     <div class="panel-body">
-                    <form name="updateGrades" action="persistgrades.php" method="post">
+                    <form name="updateGrades" action="../controllers/persistgrades.php" method="post">
                     Name:<br>
                     <?php   
                     while($studentRow = mysqli_fetch_assoc($studentResult)) {
       
-                    echo $studentRow["first_name"] . " " . $studentRow["last_name"] . 
-                    "<input type=\"text\" name=\"points\" size=\"5\">/" . $maxPoints . "<br>";   }    ?>
+                    echo "<label>" . $studentRow["first_name"] . " " . $studentRow["last_name"] . "</label>" . 
+                    "<input type=\"text\" name=\"" . $studentRow["student_id"] . "\" size=\"5\">/" . $maxPoints . "<br>";   }    ?>
   
                     <input type="submit" name= "submit" value="Update Grades">
                     </form>
