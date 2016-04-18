@@ -27,19 +27,27 @@ if(isset($_POST['submit'])) {
 		
 		
 		if($points !== ""){
-			$query2 = "select count(points_received) from grades where student_id=" . $student_id;
+			$query2 = "select count(points_received), count(assignments_id) from grades 
+						where student_id=" . $student_id . "
+						and assignments_id=" . $_POST['assignments_id'];
 			$results2 = mysqli_query($conn, $query2);
+			
+//			echo "<BR>" . $query2;
 			
 			$row2 = mysqli_fetch_assoc($results2);
 			if($row2['count(points_received)'] != 0){
 				// UPDATE DB
-				$query3 = "update grades set points_received=" . $points . " where student_id=" . $student_id;
+				$query3 = "update grades set points_received=" . $points . " 
+							where student_id=" . $student_id . "
+							and assignments_id=" . $_POST['assignments_id'];
+				
+				echo "<br>UPDATE QUERY3: " . $query3;
 
 			} else {
 				// INSERT DB
 				$query3 = "insert into grades (assignments_id, student_id, points_received)
 							values (" . $_POST['assignments_id'] . ", " . $student_id . ", " . $points . ")";
-
+				echo "<br>INSERT QUERY3: " . $query3;
 			}
 			
 			if(mysqli_query($conn, $query3)){

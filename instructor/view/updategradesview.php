@@ -16,8 +16,8 @@
 		<?php } unset($_SESSION['msg']);?>
         
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
+            
+            <div class="col-sm-8 col-sm-offset-2">
                 <div class="panel panel-primary" style="border-color: #696053;">
                     <div class="panel-heading panel-head">
                         <h3 class="panel-title">Updating grades for <?php echo $assignmentName;?></h3>
@@ -30,7 +30,7 @@
 							    	<thead>
 							    		<tr>
 							    			<th>Name</th>
-							    			<th>Points Received</th>
+							    			<th>Current Points Received</th>
 							    			<th>Max Points</th>
 							    		</tr> 
 							    	</thead>   
@@ -54,7 +54,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3"></div>
         </div>
     
     </div>

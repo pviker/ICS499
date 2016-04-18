@@ -97,8 +97,10 @@
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/content/addassignment.php">Add Assignments</a></li>
 				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewcoursestudents.php">View Student Classlist</a></li>
+				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewdropbox.php">View Dropbox</a></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/grades.php">Update Grades</a></li>
+				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewgrades.php">View Grades</a></li>
 		          		</ul>
 		        	</li>
 	        	<?php } ?>
