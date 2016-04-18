@@ -22,8 +22,17 @@
 		$_SESSION['errormsg'] = "Can't retrieve courses.";
 		//header("Location: ../index.php");
 	}
+    
+    $query1 = "select student_id from student, user
+                       where student.user_id=user.user_id
+                       and user.username='" . $_SESSION["username"] . "'";
+                       
+    $result1 = mysqli_query($conn, $query1);
+    
+    $studentIDRow = mysqli_fetch_assoc($result1);
+    $student_id = $studentIDRow["student_id"];         
 
-	$getCourseAssignments = "SELECT assignments_id, name, description, due_date, max_points, dropbox_flag 
+	$getCourseAssignments = "SELECT name, max_points, assignments_id 
 								FROM assignments
     							WHERE courses_id=".$course;
 	
@@ -37,18 +46,25 @@
         exit;
 	} else {
 		while($row = mysqli_fetch_assoc($assignmentResults)) {
-			if($row['dropbox_flag'] == 0){
-				$dropbox = "";
-			} else {
-				$dropbox = "<a href='../content/dropbox.php?assignmentID=".$row['assignments_id']."'>Submit</a>";
-			}
-			echo "<tr>".
-				 "<td>".$row['name']."</td>".
-				 "<td>".$row['description']."</td>".
-				 "<td>".$row['due_date']."</td>".
-				 "<td>".$row['max_points']."</td>".
-				 "<td>".$dropbox."</td>
-				 </tr>";
+		    
+            echo "<tr>".
+                 "<td>".$row['name']."</td>";
+                 
+                 $query2 = "select points_received from grades
+                       where student_id =" . $student_id . 
+                       " and assignments_id =" . $row["assignments_id"];
+                       
+                       // echo $query2;
+            $max_points = $row['max_points'];
+                       
+            $result2 = mysqli_query($conn, $query2);
+            
+            while($row2 = mysqli_fetch_assoc($result2)) {
+                 echo "<td>".$row2['points_received']."</td>";
+                 
+           } 
+
+           echo "<td>".$max_points."</td></tr>";    
  		}
 	  }
 
