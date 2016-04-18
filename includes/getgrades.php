@@ -50,23 +50,38 @@
             echo "<tr>".
                  "<td>".$row['name']."</td>";
                  
+                 $query3 = "select count(*) from grades
+                       where student_id =" . $student_id . 
+                       " and assignments_id =" . $row["assignments_id"];
+                       
+                 $result3 = mysqli_query($conn, $query3);
+                 
+                 $row3 = mysqli_fetch_assoc($result3);
+                 
+             if($row3['count(*)'] == 1) {
+                     
                  $query2 = "select points_received from grades
                        where student_id =" . $student_id . 
                        " and assignments_id =" . $row["assignments_id"];
                        
                        // echo $query2;
-            $max_points = $row['max_points'];
+                 // $max_points = $row['max_points'];
                        
-            $result2 = mysqli_query($conn, $query2);
+                 $result2 = mysqli_query($conn, $query2);
             
-            while($row2 = mysqli_fetch_assoc($result2)) {
-                 echo "<td>".$row2['points_received']."</td>";
-                 
-           } 
+                 while($row2 = mysqli_fetch_assoc($result2)) {
+                      echo "<td>".$row2['points_received']."</td>";
+                  
+                 } 
+            
+            } else {
+                    
+                echo "<td>No grade posted</td>";
+            }
 
-           echo "<td>".$max_points."</td></tr>";    
- 		}
+           echo "<td>". $row["max_points"] ."</td></tr>";    
+ 		
 	  }
 
-
+}
 ?>
