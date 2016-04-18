@@ -4,7 +4,7 @@ if(isset($_GET["assignments_id"])) {
     
 $assignments_id = $_GET["assignments_id"];    
     
-$pointsQuery = "select max_points, name from assignments
+$pointsQuery = "select max_points from assignments
           where assignments_id='" . $assignments_id . "'";        
     
 $pointsResult = mysqli_query($conn, $pointsQuery);
@@ -12,7 +12,6 @@ $pointsResult = mysqli_query($conn, $pointsQuery);
 $pointsRow = mysqli_fetch_assoc($pointsResult);
 
 $maxPoints = $pointsRow["max_points"];
-$assignmentName = $pointsRow['name'];
 
 mysqli_free_result($pointsResult);
 
