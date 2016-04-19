@@ -16,7 +16,8 @@
 <div class="container-fluid">
 
 	<div class="jumbotron mainheader">
-		<h1 class="text-center">The Learning Hub</h1>
+		<h1 class="text-center">LearningHUB</h1>
+		<h4 class="text-center">(A student/instructor resource and communication application)</h4>
 	</div>
 	
 	<div class="row">
