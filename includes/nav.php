@@ -36,7 +36,7 @@
 	        	<span class="icon-bar"> </span>     
 	        	<span class="icon-bar"> </span>                     
 	      	</button>
-	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/view/landing.php">The Learning Hub</a>
+	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/view/landing.php">LearningHUB | <small style="color:white">Student Portal</small></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	    	<ul class="nav navbar-nav">

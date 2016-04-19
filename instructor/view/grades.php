@@ -8,7 +8,10 @@
 ?>
 
 	<div class="container-fluid">
-		
+		<ol class="breadcrumb">
+			<li><a href="course.php?courseID=<?php echo $courseID; ?>" style="color: black">Home</a></li>
+			<li class="active">Assignments to grade</li>
+		</ol>
 		<div class="row">
 			<div class="col-sm-3"></div>
 	    	<div class="col-sm-6">

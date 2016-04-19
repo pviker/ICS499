@@ -37,7 +37,7 @@
 	        	<span class="icon-bar"> </span>     
 	        	<span class="icon-bar"> </span>                     
 	      	</button>
-	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/instructor/view/landing.php">The Learning Hub <small>(Instructor Portal)</small></a>
+	    	<a class="navbar-brand" href="<?php echo $rootDir ?>/instructor/view/landing.php">LearningHUB | <small style="color:white">Instructor Portal</small></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	    	<ul class="nav navbar-nav">
@@ -84,13 +84,23 @@
 	        		}
 		        ?>
 		        
-		        <?php if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ ?>
+		        <?php 
+		        
+		        	if(isset($_SESSION['selectedCourse']) || isset($_GET['courseID'])){ 
+		        		if(isset($_SESSION['selectedCourse'])){
+							$course = $_SESSION['selectedCourse'];
+						} else if(isset($_GET['courseID'])) {
+							$course = $_GET['courseID'];
+						}
+		        ?>
 		        	<li class="dropdown <?php echo $active; ?>">
 		          		<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;
 		          			<?php include $_SERVER['DOCUMENT_ROOT'].$rootDir.'includes/getcoursenum.php';?>
 		          			<span class="caret"> </span>
 		          		</a>
 		          		<ul class="dropdown-menu">
+		          			<li><a href='<?php echo $rootDir; ?>/instructor/view/course.php?courseID=<?php echo $course;?>'>Course Home</a></li>
+				            <li role="separator" class="divider"></li>
 			          		<li><a href="<?php echo $rootDir ?>/instructor/view/content/addcourseupdate.php">Add Course Update</a></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/content/addcoursematerials.php">Add Course Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/content/adddiscussionpost.php">Add Discussion Post</a></li>
@@ -100,7 +110,6 @@
 				            <li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewdropbox.php">View Dropbox</a></li>
 				            <li><a href="<?php echo $rootDir ?>/instructor/view/grades.php">Update Grades</a></li>
-				            <li><a href="<?php echo $rootDir ?>/instructor/view/viewgrades.php">View Grades</a></li>
 		          		</ul>
 		        	</li>
 	        	<?php } ?>
