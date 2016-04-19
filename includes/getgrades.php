@@ -45,7 +45,11 @@
        // header("Location: ../index.php");
         exit;
 	} else {
+		$maxPointsTotal = 0;
+		$totalPoints = 0;
 		while($row = mysqli_fetch_assoc($assignmentResults)) {
+			
+			$maxPointsTotal += $row['max_points'];
 		    
             echo "<tr>".
                  "<td>".$row['name']."</td>";
@@ -69,8 +73,11 @@
                        
                  $result2 = mysqli_query($conn, $query2);
             
+                 
                  while($row2 = mysqli_fetch_assoc($result2)) {
-                      echo "<td>".$row2['points_received']."</td>";
+                 	$totalPoints += $row2['points_received'];
+                 	
+                    echo "<td>".$row2['points_received']."</td>";
                   
                  } 
             

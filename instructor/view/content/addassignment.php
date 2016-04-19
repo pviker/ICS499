@@ -62,9 +62,10 @@
 						  		<label for="description">Description</label>
 						  		<input type="text" class="form-control <?php echo $status; ?>" id="description" name="description" placeholder="Read chapters 1-n">
 						  	</div>
-						  	<div class="form-group">
+						  	<div class="form-group has-feedback">
 						  		<label for="duedate">Due date</label>
 						  		<input type="text" class="form-control <?php echo $status; ?>" id="datepicker" name="datepicker">
+						  		<span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
 						  	</div>
 						  	<div class="form-group">
 						  		<label for="description">Max points</label>
