@@ -97,7 +97,7 @@
 		          			<span class="caret"> </span>
 		          		</a>
 		          		<ul class="dropdown-menu">
-			          		<li><a href="<?php echo $rootDir ?>/view/course.php">Course Updates</a></li>
+			          		<li><a href="<?php echo $rootDir ?>/view/course.php">Course Home</a></li>
 					       	<li role="separator" class="divider"></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/materials.php">Class Materials</a></li>
 				            <li><a href="<?php echo $rootDir ?>/view/content/forum.php">Discussion Forum</a></li>
