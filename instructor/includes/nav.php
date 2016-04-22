@@ -55,6 +55,24 @@
 		        
 	        	<li class="<?php echo $active; ?>"><a href="<?php echo $rootDir ?>/instructor/view/landing.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 	        	
+	        	
+	        	<?php
+                    $server = $_SERVER['PHP_SELF'];
+                    $pos = strpos($server, "password");
+                    
+                    if ($pos !== false) {
+                        $active = "active";
+                    } else {
+                        $active = "";
+                    }
+                ?>
+                
+	        	<li class="<?php echo $active; ?>">
+                    <a href="<?php echo $rootDir ?>/instructor/view/changepasswordform.php">
+                    Change Password
+                    </a>
+                </li>
+	        	
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
 	        		$pos = strpos($server, "course.php");

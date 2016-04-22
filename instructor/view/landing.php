@@ -21,6 +21,14 @@
 		
 		<div class="row">
 	    	<div class="col-sm-6 col-sm-offset-3">
+	    	    <?php
+	    	     if(isset($_SESSION['passConfirmMessage'])) {
+     
+     echo $_SESSION['passConfirmMessage'];
+     unset($_SESSION['passConfirmMessage']);
+ }
+                 
+ ?>
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
 			    		<h3 class="panel-title">Select Course</h3>
