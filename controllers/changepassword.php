@@ -1,13 +1,11 @@
 <?php
 
-
+if(!isset($_SESSION)) {
+     session_start(); }
+     
  require("db.php");
  require("../includes/passwordValidate.php");
   
- if(!isset($_SESSION)) {
-     session_start();
- }
-   
 if(!isset($_SESSION['username'])) {
      header("Location: ../includes/login.php");
  }
@@ -24,9 +22,9 @@ if(!isset($_SESSION['username'])) {
  
      passwordValidate($newPassword);
      
-     $passQuery = "select password from credentials2 where username='" . $_SESSION['uname'] . "'";
+     $passQuery = "select password from user where username='" . $_SESSION['username'] . "'";
      
-     $passResult = mysqli_query($connection, $passQuery);
+     $passResult = mysqli_query($conn, $passQuery);
      
      $passRow = mysqli_fetch_assoc($passResult);
      
@@ -36,26 +34,26 @@ if(!isset($_SESSION['username'])) {
  
         if($newPassword === $confirmPassword) {
      
-           $passUpdate = "update credentials2 set password = sha1('" . $newPassword . "')
-           where username = '" . $_SESSION['uname'] . "'";
+           $passUpdate = "update user set password = sha1('" . $newPassword . "')
+           where username = '" . $_SESSION['username'] . "'";
            
-           mysqli_query($connection, $passUpdate);
+           mysqli_query($conn, $passUpdate);
            
            $_SESSION['passConfirmMessage'] = "You have successfully changed your password.";
            
-           header("Location: ../index.php");
+           header("Location: ../view/landing.php");
      
         } else {
      
      $_SESSION['passNotMatch'] = "Passwords do not match. Please try again.<br>";
-     header("Location: changePasswordForm.php");
+     header("Location: ../view/changepasswordform.php");
      
         }
         
       }  else {
      
     $_SESSION['passNotMatch'] = "Passwords do not match. Please try again.<br>";
-     header("Location: changePasswordForm.php");
+     header("Location: ../view/changepasswordform.php");
      
         }
 

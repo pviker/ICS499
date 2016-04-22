@@ -11,6 +11,30 @@ include '../includes/nav.php';
         
         <div class="row">
             <div class="col-sm-12">
+                
+<?php
+                
+     if(isset($_SESSION['blankPassMessage'])) {
+     
+     echo $_SESSION['blankPassMessage'];
+     unset($_SESSION['blankPassMessage']);
+ }
+ 
+ if(isset($_SESSION['passNotMatch'])) {
+     
+     echo $_SESSION['passNotMatch'];
+     unset($_SESSION['passNotMatch']);
+ }
+ 
+ if(isset($_SESSION['passLengthMessage'])) {
+     
+     echo $_SESSION['passLengthMessage'];
+     unset($_SESSION['passLengthMessage']);
+ }
+                
+                
+                
+                ?>
                 <div class="panel panel-primary" style="border-color: #696053;">
                     <div class="panel-heading panel-head">
                         <h3 class="panel-title">Change Password</h3>

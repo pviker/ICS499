@@ -21,7 +21,7 @@ function passwordValidate($newPassIn) {
     
     if($flag == 0) {
         
-        header("Location: changePasswordForm.php");
+        header("Location: ../view/changepasswordform.php");
         exit;
         
     }
