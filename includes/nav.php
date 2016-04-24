@@ -68,13 +68,13 @@
                         $active = "";
                     }
                 ?>
-	        	
+<!--         	
 	        	<li class="<?php echo $active; ?>">
                     <a href="<?php echo $rootDir ?>/view/changepasswordform.php">
                     Change Password
                     </a>
                 </li>
-	        	
+-->       	
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
 	        		$pos = strpos($server, "course");
@@ -150,8 +150,9 @@
 	        	<?php } ?>
 	      	</ul>
 	      	<ul class="nav navbar-nav navbar-right">
-	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['firstName']." ".$_SESSION['lastName']; ?></a></li>
+	        	<li><a href="<?php echo $rootDir ?>/view/profile.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['firstName']." ".$_SESSION['lastName']; ?></a></li>
 	        	<li><a href="<?php echo $rootDir ?>/controllers/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+<!--         	<li><a href="<?php echo $rootDir ?>/view/changepasswordform.php" style="font-size: 10px">(change password)</a></li> -->
 	      	</ul>
 	    </div>
 	</nav>

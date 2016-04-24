@@ -52,7 +52,7 @@
 							    		<div class="row">
 							    			<div class="col-sm-4"></div>
 								    		<div class="col-sm-4">
-								    			<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
+								    			<button type="submit" name="submit" value="submit" class="btn btn-default btn-block" ><span class="glyphicon glyphicon-share"></span> 
 							 						Submit
 							 					</button><br>
 							 				</div>

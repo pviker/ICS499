@@ -13,14 +13,14 @@
 	    	<div class="col-sm-6">
     			<div class="panel panel-primary" style="border-color: #696053;">
 			  		<div class="panel-heading panel-head">
-			    		<h3 class="panel-title">Materials</h3>
+			    		<h3 class="panel-title">Download Course Materials</h3>
 			  		</div>
 				  	<div class="panel-body">
 				    	<div class="list-group">
 							<?php 
 								while($content_row = mysqli_fetch_assoc($content_results)) {
 								    echo "<a href = '../../controllers/coursecontentdownload.php?course_content_id=" . $content_row["course_content_id"] . "'
-	    									 class='list-group-item'>" . $content_row["title"] . " <small>(Filename: " . $content_row['file_name'] . ")</small></a>";
+	    									 class='list-group-item'><span class='glyphicon glyphicon-download'></span> " . $content_row["title"] . " <small>(Filename: " . $content_row['file_name'] . ")</small></a>";
 								} 
 							?>
 						</div>

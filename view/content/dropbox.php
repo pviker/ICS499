@@ -40,7 +40,7 @@
 						  		<input class="" type="file" name="myFile" id="fileinput"/>
 						  		<p class="help-block">Upload your document (valid filetypes: .pdf, .jpg, .doc, .txt max file size 2MB)</p>
 						  	</div>
-						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black; " >
+						 	<button type="submit" name="submit" value="submit" class="btn btn-default btn-block"><span class="glyphicon glyphicon-upload"></span> 
 						 		Upload
 						 	</button>
 						</form>

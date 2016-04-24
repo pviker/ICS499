@@ -75,7 +75,7 @@
 			$_SESSION['studentid'] = $studentid;
 		}
 		
-	 	$getUserInfoQuery = "select student_courses.student_id, courses.course_num, student.first_name, student.last_name
+	 	$getUserInfoQuery = "select student_courses.student_id, courses.course_num, student.first_name, student.last_name, student.email
 	 							from student_courses, courses, student 
 	     						where student_courses.student_id=student.student_id
 		   						and student_courses.course_id=courses.courses_id
@@ -93,15 +93,26 @@
 	 		
 	   		$_SESSION['firstName'] = $row['first_name'];
 	   		$_SESSION['lastName'] = $row['last_name'];
+	   		$_SESSION['email'] = $row['email'];
+
 			
 	  	}
-	 	
+	  
 	 	if(isset($_SESSION['studentid'])){
 	 		$studentid = $_SESSION['studentid'];
 	 	} else {
 	 		$_SESSION['errormsg'] = "Can't retrieve courses.";
 	 		header("Location: ../index.php");
 	 	}
+	 	
+	 	$_SESSION['instructorID'] = $row['instructor_id'];
+// 	 	$_SESSION['firstName'] = $row['first_name'];
+// 	 	$_SESSION['lastName'] = $row['last_name'];
+// 	 	$_SESSION['email'] = $row['email'];
+	 	$username = $_SESSION['username'];
+	 	$firstName = $_SESSION['firstName'];
+	 	$lastName = $_SESSION['lastName'];
+	 	$email = $_SESSION['email'];
  	
 	} 
 	
@@ -120,6 +131,7 @@
 		$_SESSION['firstName'] = $row['first_name'];
 		$_SESSION['lastName'] = $row['last_name'];
 		$_SESSION['email'] = $row['email'];
+
 		
 	}
 
