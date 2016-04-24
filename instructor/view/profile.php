@@ -21,11 +21,11 @@
 			  		</div>
 				  	<div class="panel-body">
 				        <p class="lead">
-					        Username: <?php echo $username; ?> <br>
+					        Username: <?php echo $_SESSION['username']; ?> <br>
 					        Name: <?php echo $_SESSION['firstName']; ?> <?php echo $_SESSION['lastName']; ?><br>
 					        Email: <?php echo $_SESSION['email']; ?> <br>
 				        </p>
-				        <a class="btn btn-default"><span class="glyphicon glyphicon-lock"></span> Change Password</a>
+				        <a href="changepasswordform.php" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span> Change Password</a>
 				        
 				  	</div>
 				</div>	

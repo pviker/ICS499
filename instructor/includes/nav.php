@@ -67,11 +67,11 @@
                     }
                 ?>
                 
-	        	<li class="<?php echo $active; ?>">
-                    <a href="<?php echo $rootDir ?>/instructor/view/changepasswordform.php">
-                    Change Password
-                    </a>
-                </li>
+<!--         	<li class="<?php echo $active; ?>"> -->
+<!--                <a href="<?php echo $rootDir ?>/instructor/view/changepasswordform.php"> -->
+<!--                     Change Password -->
+<!--                     </a> -->
+<!--                 </li> -->
 	        	
 	        	<?php
 	        		$server = $_SERVER['PHP_SELF'];
