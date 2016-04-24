@@ -49,7 +49,7 @@
 							<div class="form-group">
 								<textarea id="txtarea" name="txtarea" placeholder="Update Description" ></textarea><br>	    		
 						  	</div>
-						 	<button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" style="background-color: black;" >
+						 	<button type="submit" name="submit" value="submit" class="btn btn-default btn-block">
 						 		Submit
 						 	</button>
 						</form>

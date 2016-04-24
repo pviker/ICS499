@@ -15,19 +15,31 @@ include '../includes/nav.php';
 			                
 			 if(isset($_SESSION['blankPassMessage'])) {
 			     
-			     echo $_SESSION['blankPassMessage'];
+			 	echo "<div class='alert alert-danger alert-dismissible' role='alert'>" . $_SESSION['blankPassMessage'] . "
+	            			<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+	            			<span aria-hidden='true'>&times;</span>
+	            			</button>
+            				</div>";
 			     unset($_SESSION['blankPassMessage']);
 			 }
 			 
 			 if(isset($_SESSION['passNotMatch'])) {
 			     
-			     echo $_SESSION['passNotMatch'];
+			      echo "<div class='alert alert-danger alert-dismissible' role='alert'>" . $_SESSION['passNotMatch'] . "
+				     		<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+				     		<span aria-hidden='true'>&times;</span>
+				     		</button>
+				     		</div>";
 			     unset($_SESSION['passNotMatch']);
 			 }
 			 
 			 if(isset($_SESSION['passLengthMessage'])) {
 			     
-			     echo $_SESSION['passLengthMessage'];
+			     echo "<div class='alert alert-danger alert-dismissible' role='alert'>" . $_SESSION['passLengthMessage'] . "
+				     		<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+				     		<span aria-hidden='true'>&times;</span>
+				     		</button>
+				     		</div>";
 			     unset($_SESSION['passLengthMessage']);
 			 }
 			                
