@@ -60,9 +60,22 @@
 						    		</tr>
 						    	</thead>
 							    <?php
-							    	while($row = mysqli_fetch_assoc($result)) {
-			                            echo "<tr><td>" . $row["course_num"] . "</td><td>" . $row["name"] . "</td><td>" . $row["due_date"] . "</td></tr>";
-							    	}
+							    
+							    while($row3 = mysqli_fetch_assoc($result3)) {  
+    
+                                      $query4 = "select name, due_date, course_num from assignments, courses 
+                                      where assignments.courses_id=courses.courses_id
+                                      and due_date between'" . $date . "' and '" . $futureDate . "'
+                                      and courses.courses_id =" . $row3['course_id'] . "
+                                      order by assignments.due_date asc";
+              
+                                      $result4 = mysqli_query($conn, $query4);
+             
+                                        while($row4 = mysqli_fetch_assoc($result4)) {
+                                            
+			                            echo "<tr><td>" . $row4["course_num"] . "</td><td>" . $row4["name"] . "</td><td>" . $row4["due_date"] . "</td></tr>";
+							    	    }
+                                }	
 						    	?>
 							</table>
 						</div>
